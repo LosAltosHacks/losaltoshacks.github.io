@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
-    <head>
-
+<head>
         <title>Los Altos Hacks</title>
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
         <link rel="icon" size="80x80" href="favicon.png">
@@ -21,470 +20,476 @@
           (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
           m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
           })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
           ga('create', 'UA-65741663-1', 'auto');
           ga('send', 'pageview');
-
         </script>
+</head>
 
-    </head>
-
-    <body>
+<body>
 
 
-    <!-- ============== INTRO ============== -->
+<!-- ============== INTRO ============== -->
 
-        <section id="intro" class="colored text-center">
-        <header>
-            <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-                <div class="container">
-                    <div class="row">
-                        <div id="main-nav" class="navbar-collapse collapse">
-
-                            <ul class="nav navbar-nav navbar-right links">
-
-                                <a id="apply-btn" href="#"><li>APPLY</li></a>
-                                <a id="intro-btn" href="#intro"><li>HOME</li></a>
-                                <a id="schedule-btn" href="#schedule"><li>SCHEDULE</li></a>
-                                <a id="faq-btn" href="#faq"><li>FAQ</li></a>
-                                <a id="sponsors-btn" href="#sponsors"><li>SPONSORS</li></a>
-                                <a id="team-btn" href="#team"><li>TEAM</li></a>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </nav>
-        </header>
-
-        <div class="container">
-            <div class="intro-well wow animated fadeIn animated" data-wow-delay="0.4s" style="visibility: visible; -webkit-animation: fadeIn 0.4s;">
-
+    <section id="intro" class="colored text-center" data-stellar-background-ratio="0.5" style="background-position: -25px -25px;">
+    <header>
+        <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container bcg-container">
                 <div class="row">
-                    <div class="col-lg-12 col-sm-12">
-                        <div class="col-lg-12 col-sm-12">
-                            <img src="img/losaltoshacks.png" id="logo" class="img-responsive">
-                        </div>
+<!--                         <a class="navbar-brand" href="{{pathFor 'home'}}">{{Config.name}}</a>
+-->                  <div id="main-nav" class="navbar-collapse collapse">
 
-                        <h2 style="color:white;" class="uppercase">A 24-hour hackathon held in Los Altos, California</h2>
-                        <h3 style="color:white;" class="uppercase">Hillview Community Center, January 30 - 31, 2016</h3>
+                        <ul class="nav navbar-nav links">
 
-                        <button id="apply-btn" type="button" class="uppercase btn btn-info btn-outline btn-lg">Applications Open Soon</button>
-
-                        <h5 class="uppercase" id="sponsor-label">Interested in becoming a sponsor?</h5>
-                        <div id="sponsorship-links">
-                                <a href="mailto:sponsor@losaltoshacks.com" class="uppercase" id="sponsor-btn">Email</a> |
-                                <a href="docs/sponsorship.pdf" class="uppercase">Prospectus</a>
-                        </div>
+                            <a id="intro-btn" href="#intro"><li>Home</li></a>
+                            <a id="intro-btn" href="#map"><li>About</li></a>
+                            <a id="schedule-btn" href="#schedule"><li>Schedule</li></a>
+                            <a id="faq-btn" href="#faq"><li>FAQ</li></a>
+                            <a id="sponsors-btn" href="#sponsors"><li>Sponsors</li></a>
+                            <a id="team-btn" href="#team"><li>Team</li></a>
+                            <a href="#" id="apply">Apply</a>
+                        </ul>
 
                     </div>
                 </div>
             </div>
+        </nav>
 
-        </div>
-    </section>
+    </header>
 
-    <!-- ============== SCHEDULE ============== -->
+    <div class="container">
+        <div class="intro-well wow animated fadeIn animated" data-wow-delay="0.4s" style="visibility: visible; -webkit-animation: fadeIn 0.4s;">
 
-        <section id="schedule" class="text-center">
-
-        <div class="container">
-    <!--             <div class="row col-md-12">
-                <h4>{{Config.name}} - {{Config.subtitle}}</h4>
-        </div> -->
-
-
-            <!-- EVENTUALLY POPULATE THIS WITH JS -->
-            <div class="row" id="icon-row">
-                <div class="col-xs-12 col-md-8 col-md-push-2">
-                    <h2 class="uppercase" style="margin: 0 auto;">Schedule</h2>
-
-                    <h3 class="uppercase">Day 1</h3>
-                    <table class="table centered-table">
-                        <thead>
-                            <tr>
-                                <th class="time uppercase">Time</th>
-                                <th class="event uppercase">Event</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>11:00 AM</td>
-                                <td>Doors Open</td>
-                            </tr>
-                            <tr>
-                                <td>12:00 PM</td>
-                                <td>Lunch</td>
-                            </tr>
-                            <tr>
-                                <td>1:00 PM</td>
-                                <td>Start Hacking!</td>
-                            </tr>
-                            <tr>
-                                <td>6:00 PM</td>
-                                <td>Dinner</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div> <!-- </div class="row"> -->
-
-            <div class="row" id="icon-row">
-                <div class="col-xs-12 col-md-8 col-md-push-2">
-                    <h3 class="uppercase">Day 2</h3>
-                    <table class="table">
-                        <thead>
-                            <tr>
-                                <th class="time uppercase">Time</th>
-                                <th class="event uppercase">Event</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>12:00 AM</td>
-                                <td>Midnight Snack</td>
-                            </tr>
-                            <tr>
-                                <td>8:00 AM</td>
-                                <td>Breakfast</td>
-                            </tr>
-                            <tr>
-                                <td>11:00 AM</td>
-                                <td>Lunch</td>
-                            </tr>
-                            <tr>
-                                <td>1:00 PM</td>
-                                <td>Submit Hacks</td>
-                            </tr>
-                            <tr>
-                                <td>4:00 PM</td>
-                                <td>Hackathon Ends</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div> <!-- </div class="row"> -->
-        </div>
-
-    </section>
-
-    <!-- ============== FAQ ============== -->
-
-        <section id="faq" class="colored text-center">
-        <div class="container">
             <div class="row">
-                <h2 class="uppercase" style="margin: 0 auto;">FAQ</h2>
+                <div class="col-lg-12 col-sm-12">
+                    <div class="col-lg-12 col-sm-12">
+                        <img src="img/losaltoshacks.png" id="logo" class="img-responsive">
+                    </div>
+
+<!--                     <h2 id="desc" style="color:white;" class="">{{description}}</h2>
+ -->                    <h3 id="about" style="color:white;" class="">Hillview Community Center</h3>
+                    <h3>January 30 - 31, 2016</h3>
+
+                    <button id="apply-btn" type="button" class=" btn btn-info btn-lg">Applications Open Soon</button>
+
+                    <h5 class="" id="sponsor-label">Interested in becoming a sponsor?</h5>
+                    <div id="sponsorship-links">
+                            <a href="mailto:sponsor@losaltoshacks.com" class="" id="sponsor-btn">Email</a> |
+                            <a href="docs/sponsorship.pdf" class="">Prospectus</a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- ============== MAP ============== -->
+
+    <section id="map" class="colored">
+		<div class="row">
+			<div class="map-container">
+				<div class="map-canvas" style="width: 100%; height: 100%"></div>
+			</div>
+		</div>
+
+<!--
+		<div class="container">
+			<div class="row">
+					<h2 style="text-align: center;">About</h2>
+			</div>
+		</div> -->
+
+
+	</section>
+
+<!-- ============== SCHEDULE ============== -->
+
+    <section id="schedule" class="text-center">
+
+    <div class="container">
+<!--             <div class="row col-md-12">
+            <h4>{{Config.name}} - {{Config.subtitle}}</h4>
+    </div> -->
+
+
+        <!-- EVENTUALLY POPULATE THIS WITH JS -->
+        <div class="row" id="icon-row">
+            <div class="col-xs-12 col-md-8 col-md-push-2">
+                <h2 class="">Schedule</h2>
+
+                <h3>Saturday, January 30th</h3>
+                <table class="table centered-table">
+                    <thead>
+                        <tr>
+                            <th class="text-center">Time</th>
+                            <th class="text-center">Event</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>11:00 AM</td>
+                            <td>Doors Open</td>
+                        </tr>
+                        <tr>
+                            <td>12:00 PM</td>
+                            <td>Lunch</td>
+                        </tr>
+                        <tr>
+                            <td>1:00 PM</td>
+                            <td>Start Hacking!</td>
+                        </tr>
+                        <tr>
+                            <td>6:00 PM</td>
+                            <td>Dinner</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div> <!-- </div class="row"> -->
+
+        <div class="row" id="icon-row">
+            <div class="col-xs-12 col-md-8 col-md-push-2">
+                <h3>Sunday, January 31st</h3>
+                <table class="table centered-table">
+                    <thead>
+                        <tr>
+                            <th class="text-center">Time</th>
+                            <th class="text-center">Event</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>12:00 AM</td>
+                            <td>Midnight Snack</td>
+                        </tr>
+                        <tr>
+                            <td>8:00 AM</td>
+                            <td>Breakfast</td>
+                        </tr>
+                        <tr>
+                            <td>11:00 AM</td>
+                            <td>Lunch</td>
+                        </tr>
+                        <tr>
+                            <td>1:00 PM</td>
+                            <td>Submit Hacks</td>
+                        </tr>
+                        <tr>
+                            <td>4:00 PM</td>
+                            <td>Hackathon Ends</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div> <!-- </div class="row"> -->
+    </div>
+
+</section>
+
+<!-- ============== FAQ ============== -->
+
+    <section id="faq" class="colored text-center">
+    <div class="container">
+        <h2 class="uppercase" style="margin: 0 auto;">FAQ</h2>
+        <div class="row">
 
 
 
-                    <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4">
+                <div class="flex-item-faq">
+
         <div class="panel panel-default">
             <div class="panel-heading uppercase">
-                <h4 class="panel-title">Question 1</h4>
+                <h4 class="panel-title">What is a hackathon?</h4>
             </div>
             <div id="faq-1" class="panel-collapse">
                 <div class="panel-body uppercase">
-                    <p>Answer 1</p>
+                    <p>A hackathon is an event where people can get together and code an entirely new project. Los Altos Hacks will give you roughly 24 hours to make your idea become a reality.</p>
                 </div>
             </div>
         </div>
-        </div>
+
+    </div>
 
 
 
-                    <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4">
+                <div class="flex-item-faq">
+
         <div class="panel panel-default">
             <div class="panel-heading uppercase">
-                <h4 class="panel-title">Question 2</h4>
+                <h4 class="panel-title">Who can participate?</h4>
             </div>
             <div id="faq-1" class="panel-collapse">
                 <div class="panel-body uppercase">
-                    <p>Answer 2</p>
+                    <p>All high school students can participate. However, university students and those already graduated can come help mentor.</p>
                 </div>
             </div>
         </div>
-        </div>
+
+    </div>
 
 
 
-                    <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4">
+                <div class="flex-item-faq">
+
         <div class="panel panel-default">
             <div class="panel-heading uppercase">
-                <h4 class="panel-title">Question 3</h4>
+                <h4 class="panel-title">I'm not from Los Altos High School, can I still participate?</h4>
             </div>
             <div id="faq-1" class="panel-collapse">
                 <div class="panel-body uppercase">
-                    <p>Answer 3</p>
+                    <p>Yes! Any students from all high schools can participate. You do need a student id, though.</p>
                 </div>
             </div>
         </div>
-        </div>
+
+    </div>
 
 
 
-                    <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4">
+                <div class="flex-item-faq">
+
         <div class="panel panel-default">
             <div class="panel-heading uppercase">
-                <h4 class="panel-title">Question 4</h4>
+                <h4 class="panel-title">What should I bring? Will I need my own laptop?</h4>
             </div>
             <div id="faq-1" class="panel-collapse">
                 <div class="panel-body uppercase">
-                    <p>Answer 4</p>
+                    <p>All attendees are required to bring a valid student ID, which will be checked at registration. Bring your laptop, phone, hardware, chargers, or anything else you need for the weekend, since the Los Altos Hacks team will not be able to provide these for you. Power strips, ethernet cords, sleeping bags, and toiletries are highly recommended.</p>
                 </div>
             </div>
         </div>
-        </div>
+
+    </div>
 
 
 
-                    <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4">
+                <div class="flex-item-faq">
+
         <div class="panel panel-default">
             <div class="panel-heading uppercase">
-                <h4 class="panel-title">Question 5</h4>
+                <h4 class="panel-title">When and how will I know that I’ve been accepted?</h4>
             </div>
             <div id="faq-1" class="panel-collapse">
                 <div class="panel-body uppercase">
-                    <p>Answer 5</p>
+                    <p>Applications will go live during early October, and decisions will be sent out by late October.
+Please keep in mind that we are not only accepting those with coding abilities, so if you can’t code, that’s totally fine. We’re looking to put on a hackathon for people with differing skill levels.</p>
                 </div>
             </div>
         </div>
-        </div>
+
+    </div>
 
 
 
-                    <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4">
+                <div class="flex-item-faq">
+
         <div class="panel panel-default">
             <div class="panel-heading uppercase">
-                <h4 class="panel-title">Question 6</h4>
+                <h4 class="panel-title">How do I form or join a team?</h4>
             </div>
             <div id="faq-1" class="panel-collapse">
                 <div class="panel-body uppercase">
-                    <p>Answer 6</p>
+                    <p>You can either apply with your friends and specify on the application, or you can form teams the day of. If you don’t have a team, don’t worry! We’ll have a session where you can meet others and form teams. The maximum amount of people on a team is 4 people.</p>
                 </div>
             </div>
         </div>
+
+    </div>
+
+
         </div>
+    </div>
+</section>
 
+<!-- ============== SPONSORS ============== -->
 
+    <section id="sponsors" class="text-center">
+    <div class="container">
+        <div class="row">
+           	<h2 class="" style="margin: 0 auto;">Sponsors</h2>
+            <div class="col-md-12">
+            	<a href="http://adatao.com/">
+                	<img src="img/adatao.png" class="img-responsive sponsor-img">
+                </a>
+                <a href="http://brandmakers.com/">
+                	<img src="img/brandmakers.jpg" class="img-responsive sponsor-img">
+                </a>
+                <!-- Sponsors but not totally confirmed yet
+                <a href = "http://hacker.fund/">
+               		<img src="img/hackerfund.png" class="img-responsive sponsor-img">
+               	</a>
+               	<a href = "https://www.makeschool.com/">
+                	<img src="img/makeschool.svg" class="img-responsive sponsor-img">
+                </a>
+                -->
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- ============== SPONSORS ============== -->
-
-        <section id="sponsors" class="text-center">
-        <div class="container">
-            <div class="row">
-               	<h2 class="uppercase" style="margin: 0 auto;">Sponsors</h2>
-                <div class="col-md-12">
-                	<a href="http://adatao.com/">
-                    	<img src="img/adatao.png" class="img-responsive sponsor-img">
-                    </a>
-                    <a href="http://brandmakers.com/">
-                    	<img src="img/brandmakers.jpg" class="img-responsive sponsor-img">
-                    </a>
-                    <!-- Sponsors but not totally confirmed yet
-                    <a href = "http://hacker.fund/">
-                   		<img src="img/hackerfund.png" class="img-responsive sponsor-img">
-                   	</a>
-                   	<a href = "https://www.makeschool.com/">
-                    	<img src="img/makeschool.svg" class="img-responsive sponsor-img">
-                    </a>
-                    test
-                    -->
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ============== TEAM ============== -->
+<!-- ============== TEAM ============== -->
 
     <section id="team" class="colored text-center">
 
-      <div class="container">
+  <div class="container">
 
-      	<div class="row">
+  	<div class="row">
 
-      		<h2 class="uppercase" style="margin: 0 auto;">Team</h2>
-      		<ul class="flex-container">
+  		<h2 class="" style="margin: 0 auto;">Team</h2>
+  		<ul class="flex-container">
 
-      				<li class="flex-item">
-     	<div class="team box">
-    		<div class="inner">
-    				<div class="avatar"><img src="img/sely.jpg" alt="" class="img-responsive avatar-circle"></div>
-    				<h3 class="uppercase">Selynna Sun</h3>
-    		    <p class="subtitle uppercase" style="color:white;">Lead Organizer</p>
-    		</div>
-    	</div>
-     </li>
+  				<li class="flex-item">
+ 	<div class="team box">
+		<div class="inner">
+				<div class="avatar"><img src="img/sely.jpg" alt="" class="img-responsive avatar-circle"></div>
+				<h3 class="uppercase">Selynna Sun</h3>
+		    <p class="subtitle uppercase" style="color:white;">Lead Organizer</p>
+		</div>
+	</div>
+ </li>
 
-      				<li class="flex-item">
-     	<div class="team box">
-    		<div class="inner">
-    				<div class="avatar"><img src="img/justin.jpg" alt="" class="img-responsive avatar-circle"></div>
-    				<h3 class="uppercase">Justin Yu</h3>
-    		    <p class="subtitle uppercase" style="color:white;">Tech Team</p>
-    		</div>
-    	</div>
-     </li>
+  				<li class="flex-item">
+ 	<div class="team box">
+		<div class="inner">
+				<div class="avatar"><img src="img/justin.jpg" alt="" class="img-responsive avatar-circle"></div>
+				<h3 class="uppercase">Justin Yu</h3>
+		    <p class="subtitle uppercase" style="color:white;">Tech Team</p>
+		</div>
+	</div>
+ </li>
 
-      				<li class="flex-item">
-     	<div class="team box">
-    		<div class="inner">
-    				<div class="avatar"><img src="img/dan.jpg" alt="" class="img-responsive avatar-circle"></div>
-    				<h3 class="uppercase">Dan Appel</h3>
-    		    <p class="subtitle uppercase" style="color:white;">Tech Team</p>
-    		</div>
-    	</div>
-     </li>
+  				<li class="flex-item">
+ 	<div class="team box">
+		<div class="inner">
+				<div class="avatar"><img src="img/dan.jpg" alt="" class="img-responsive avatar-circle"></div>
+				<h3 class="uppercase">Dan Appel</h3>
+		    <p class="subtitle uppercase" style="color:white;">Tech Team</p>
+		</div>
+	</div>
+ </li>
 
-      				<li class="flex-item">
-     	<div class="team box">
-    		<div class="inner">
-    				<div class="avatar"><img src="img/javin.jpg" alt="" class="img-responsive avatar-circle"></div>
-    				<h3 class="uppercase">Javin Pombra</h3>
-    		    <p class="subtitle uppercase" style="color:white;">Tech Team</p>
-    		</div>
-    	</div>
-     </li>
+  				<li class="flex-item">
+ 	<div class="team box">
+		<div class="inner">
+				<div class="avatar"><img src="img/javin.jpg" alt="" class="img-responsive avatar-circle"></div>
+				<h3 class="uppercase">Javin Pombra</h3>
+		    <p class="subtitle uppercase" style="color:white;">Tech Team</p>
+		</div>
+	</div>
+ </li>
 
-      				<li class="flex-item">
-     	<div class="team box">
-    		<div class="inner">
-    				<div class="avatar"><img src="img/ryan.JPG" alt="" class="img-responsive avatar-circle"></div>
-    				<h3 class="uppercase">Ryan Huang</h3>
-    		    <p class="subtitle uppercase" style="color:white;">Tech Team</p>
-    		</div>
-    	</div>
-     </li>
+  				<li class="flex-item">
+ 	<div class="team box">
+		<div class="inner">
+				<div class="avatar"><img src="img/ryan.JPG" alt="" class="img-responsive avatar-circle"></div>
+				<h3 class="uppercase">Ryan Huang</h3>
+		    <p class="subtitle uppercase" style="color:white;">Tech Team</p>
+		</div>
+	</div>
+ </li>
 
-      				<li class="flex-item">
-     	<div class="team box">
-    		<div class="inner">
-    				<div class="avatar"><img src="img/alicia.jpg" alt="" class="img-responsive avatar-circle"></div>
-    				<h3 class="uppercase">Alicia Leong</h3>
-    		    <p class="subtitle uppercase" style="color:white;">Lead Organizer</p>
-    		</div>
-    	</div>
-     </li>
+  				<li class="flex-item">
+ 	<div class="team box">
+		<div class="inner">
+				<div class="avatar"><img src="img/alicia.jpg" alt="" class="img-responsive avatar-circle"></div>
+				<h3 class="uppercase">Alicia Leong</h3>
+		    <p class="subtitle uppercase" style="color:white;">Lead Organizer</p>
+		</div>
+	</div>
+ </li>
 
-      				<li class="flex-item">
-     	<div class="team box">
-    		<div class="inner">
-    				<div class="avatar"><img src="img/zooey.jpg" alt="" class="img-responsive avatar-circle"></div>
-    				<h3 class="uppercase">Zooey Nguyen</h3>
-    		    <p class="subtitle uppercase" style="color:white;">Outreach Team</p>
-    		</div>
-    	</div>
-     </li>
+  				<li class="flex-item">
+ 	<div class="team box">
+		<div class="inner">
+				<div class="avatar"><img src="img/zooey.jpg" alt="" class="img-responsive avatar-circle"></div>
+				<h3 class="uppercase">Zooey Nguyen</h3>
+		    <p class="subtitle uppercase" style="color:white;">Outreach Team</p>
+		</div>
+	</div>
+ </li>
 
-      				<li class="flex-item">
-     	<div class="team box">
-    		<div class="inner">
-    				<div class="avatar"><img src="img/an.jpg" alt="" class="img-responsive avatar-circle"></div>
-    				<h3 class="uppercase">An Huynh</h3>
-    		    <p class="subtitle uppercase" style="color:white;">Outreach Team</p>
-    		</div>
-    	</div>
-     </li>
+  				<li class="flex-item">
+ 	<div class="team box">
+		<div class="inner">
+				<div class="avatar"><img src="img/an.jpg" alt="" class="img-responsive avatar-circle"></div>
+				<h3 class="uppercase">An Huynh</h3>
+		    <p class="subtitle uppercase" style="color:white;">Outreach Team</p>
+		</div>
+	</div>
+ </li>
 
-      				<li class="flex-item">
-     	<div class="team box">
-    		<div class="inner">
-    				<div class="avatar"><img src="img/aashia.jpg" alt="" class="img-responsive avatar-circle"></div>
-    				<h3 class="uppercase">Aashia Mehta</h3>
-    		    <p class="subtitle uppercase" style="color:white;">Outreach Team</p>
-    		</div>
-    	</div>
-     </li>
+  				<li class="flex-item">
+ 	<div class="team box">
+		<div class="inner">
+				<div class="avatar"><img src="img/aashia.jpg" alt="" class="img-responsive avatar-circle"></div>
+				<h3 class="uppercase">Aashia Mehta</h3>
+		    <p class="subtitle uppercase" style="color:white;">Outreach Team</p>
+		</div>
+	</div>
+ </li>
 
-      				<li class="flex-item">
-     	<div class="team box">
-    		<div class="inner">
-    				<div class="avatar"><img src="img/allison.jpg" alt="" class="img-responsive avatar-circle"></div>
-    				<h3 class="uppercase">Allison Yih</h3>
-    		    <p class="subtitle uppercase" style="color:white;">Outreach Team</p>
-    		</div>
-    	</div>
-     </li>
+  				<li class="flex-item">
+ 	<div class="team box">
+		<div class="inner">
+				<div class="avatar"><img src="img/allison.jpg" alt="" class="img-responsive avatar-circle"></div>
+				<h3 class="uppercase">Allison Yih</h3>
+		    <p class="subtitle uppercase" style="color:white;">Outreach Team</p>
+		</div>
+	</div>
+ </li>
 
-      		</ul>
+  		</ul>
 
-      	</div>
-      </div>
-    </section>
+  	</div>
+  </div>
+</section>
 
-    <!-- ============== FOOTER ============== -->
+<!-- ============== FOOTER ============== -->
 
-        <footer id="footer-home">
-            <div class="container">
-                <div class="row">
+    <footer id="footer-home">
+        <div class="container">
+            <div class="row">
 
-                    <div class="col-md-12 text-center" style="margin-bottom: 25px;">
-                        <ul class="social-media-buttons">
-                            <li>
-                                <a href="https://www.facebook.com/losaltoshacks">
-                                    <i class="fa fa-3x fa-facebook-square"></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="https://twitter.com/losaltoshacks">
-                                    <i class="fa fa-3x fa-twitter-square"></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="https://instagram.com/losaltoshacks/">
-                                    <i class="fa fa-3x fa-instagram"></i>
-                                </a>
-                            </li>
-                        </ul>
-                        <p>Made with ♥ by the 2015 Los Altos Hacks Team</p>
-                    </div>
+                <div class="col-md-12 text-center" style="margin-bottom: 25px;">
+                    <ul class="social-media-buttons">
+                        <li>
+                            <a href="https://www.facebook.com/losaltoshacks">
+                                <i class="fa fa-3x fa-facebook-square"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://twitter.com/losaltoshacks">
+                                <i class="fa fa-3x fa-twitter-square"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://instagram.com/losaltoshacks/">
+                                <i class="fa fa-3x fa-instagram"></i>
+                            </a>
+                        </li>
+                    </ul>
+                    <p>Made with ♥ by the 2015 Los Altos Hacks Team</p>
                 </div>
             </div>
-        </footer>
+        </div>
+    </footer>
 
-        <script>
-            // Bind to the click of all links with a #hash in the href
-            $('a[href^="#"]').click(function(e) {
-                // Prevent the jump and the #hash from appearing on the address bar
-                e.preventDefault();
-                // Scroll the window, stop any previous animation, stop on user manual scroll
-                // Check https://github.com/flesler/jquery.scrollTo for more customizability
-                $(window).stop(true).scrollTo(this.hash, {
-                    duration: 800,
-                    interrupt: true
-                });
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;callback=GoogleMaps.load()"></script>
+    <script>
+        GoogleMaps.load();
+        // Bind to the click of all links with a #hash in the href
+        $('a[href^="#"]').click(function(e) {
+            // Prevent the jump and the #hash from appearing on the address bar
+            e.preventDefault();
+            // Scroll the window, stop any previous animation, stop on user manual scroll
+            // Check https://github.com/flesler/jquery.scrollTo for more customizability
+            $(window).stop(true).scrollTo(this.hash, {
+                duration: 800,
+                interrupt: true
             });
+        });
+    </script>
 
-            if( ! /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
-                var scheduleWaypoint = new Waypoint({
-                element: document.getElementById('schedule'),
-                    handler: function(direction) {
-                        if(direction === "down") {
-
-
-                            $('.links > a > li').css({'color': '#333'}, 300);
-
-                            $('.navbar').css({
-                                'background-color': 'white',
-                                'opacity': 0.95,
-                            }, 200);
-
-                            $('.navbar').addClass('nav-shadow');
-                        } else {
-                            $('.navbar').css({
-                                backgroundColor: 'transparent'
-                            });
-                            $('.navbar').removeClass('nav-shadow');
-
-                            $('.links > a > li').css({'color': 'white'});
-                        }
-                    },
-                    offset: function() {
-                        return 0;
-                    }
-                });
-            }
-        </script>
     </body>
 </html>
