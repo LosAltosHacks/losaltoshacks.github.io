@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+        <meta charset="utf-8">
         <title>Los Altos Hacks</title>
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
         <link rel="icon" size="80x80" href="favicon.png">
@@ -9,10 +10,6 @@
         <link rel='stylesheet' type='text/css' href='style.css'>
 
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-scrollTo/2.1.1/jquery.scrollTo.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/3.1.1/jquery.waypoints.min.js"></script>
 
         <script src="//www.google-analytics.com/analytics.js"></script>
         <script>
@@ -28,9 +25,10 @@
 <body>
 
 
+
 <!-- ============== INTRO ============== -->
 
-    <section id="intro" class="colored text-center" data-stellar-background-ratio="0.5" style="background-position: -25px -25px;">
+    <section id="intro" class="colored text-center" data-stellar-background-ratio="0.5">
     <header>
         <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
             <div class="container bcg-container">
@@ -41,7 +39,6 @@
                         <ul class="nav navbar-nav links">
 
                             <a id="intro-btn" href="#intro"><li>Home</li></a>
-                            <a id="intro-btn" href="#map"><li>About</li></a>
                             <a id="schedule-btn" href="#schedule"><li>Schedule</li></a>
                             <a id="faq-btn" href="#faq"><li>FAQ</li></a>
                             <a id="sponsors-btn" href="#sponsors"><li>Sponsors</li></a>
@@ -57,8 +54,7 @@
     </header>
 
     <div class="container">
-        <div class="intro-well wow animated fadeIn animated" data-wow-delay="0.4s" style="visibility: visible; -webkit-animation: fadeIn 0.4s;">
-
+        <div class="intro-well wow animated fadeIn" data-wow-delay="0.4s">
             <div class="row">
                 <div class="col-lg-12 col-sm-12">
                     <div class="col-lg-12 col-sm-12">
@@ -66,9 +62,11 @@
                     </div>
 
 <!--                     <h2 id="desc" style="color:white;" class="">{{description}}</h2>
- -->                    <h3 id="about" style="color:white;" class="">Hillview Community Center</h3>
-                    <h3>January 30 - 31, 2016</h3>
-
+ -->
+                    <div class="col-lg-12 col-sm-12">
+                        <h3 id="about" style="color:white;" class="">Hillview Community Center</h3>
+                        <h3>January 30 - 31, 2016</h3>
+                    </div>
                     <button id="apply-btn" type="button" class=" btn btn-info btn-lg">Applications Open Soon</button>
 
                     <h5 class="" id="sponsor-label">Interested in becoming a sponsor?</h5>
@@ -76,7 +74,6 @@
                             <a href="mailto:sponsor@losaltoshacks.com" class="" id="sponsor-btn">Email</a> |
                             <a href="docs/sponsorship.pdf" class="">Docs</a>
                     </div>
-
                 </div>
             </div>
         </div>
@@ -84,41 +81,22 @@
     </div>
 </section>
 
-<!-- ============== MAP ============== -->
-
-    <section id="map" class="colored">
-		<div class="row">
-			<div class="map-container">
-				<div class="map-canvas" style="width: 100%; height: 100%"></div>
-			</div>
-		</div>
-
-<!--
-		<div class="container">
-			<div class="row">
-					<h2 style="text-align: center;">About</h2>
-			</div>
-		</div> -->
-
-
-	</section>
-
 <!-- ============== SCHEDULE ============== -->
 
-    <section id="schedule" class="text-center">
+    <!-- NEEDS FIXING!!!! -->
+
+<section id="schedule" class="text-center">
 
     <div class="container">
 <!--             <div class="row col-md-12">
             <h4>{{Config.name}} - {{Config.subtitle}}</h4>
     </div> -->
 
-
-        <!-- EVENTUALLY POPULATE THIS WITH JS -->
         <div class="row" id="icon-row">
             <div class="col-xs-12 col-md-8 col-md-push-2">
                 <h2 class="">Tentative Schedule</h2>
 
-                <h3>Saturday, January 30th</h3>
+                <h3>Saturday, January 30<sup>th</sup></h3>
                 <table class="table centered-table">
                     <thead>
                         <tr>
@@ -150,7 +128,7 @@
 
         <div class="row" id="icon-row">
             <div class="col-xs-12 col-md-8 col-md-push-2">
-                <h3>Sunday, January 31st</h3>
+                <h3>Sunday, January 31<sup>st</sup></h3>
                 <table class="table centered-table">
                     <thead>
                         <tr>
@@ -199,13 +177,13 @@
                 <div class="flex-item-faq">
 
         <div class="panel panel-default">
-            <div class="panel-heading uppercase">
-                <h4 class="panel-title">What is a hackathon?</h4>
+            <div class="panel-heading">
+                <h4 class="panel-title">What is Los Altos Hacks?</h4>
             </div>
             <div id="faq-1" class="panel-collapse">
-                <div class="panel-body uppercase">
-                    <p>A hackathon is an event where people can get together and code an entirely new project. Los Altos Hacks will give you roughly 24 hours to make your idea become a reality.</p>
-                </div>
+                <div class="panel-body text-left">
+                    <p>A hackathon is an event where people can get together and code an entirely new project. At Los Altos Hacks, you will have 24 hours to make your idea a reality.</p>
+                 </div>
             </div>
         </div>
 
@@ -216,13 +194,13 @@
                 <div class="flex-item-faq">
 
         <div class="panel panel-default">
-            <div class="panel-heading uppercase">
+            <div class="panel-heading">
                 <h4 class="panel-title">Who can participate?</h4>
             </div>
             <div id="faq-1" class="panel-collapse">
-                <div class="panel-body uppercase">
-                    <p>All high school students can participate. However, university students and those already graduated can come help mentor.</p>
-                </div>
+                <div class="panel-body text-left">
+                    <p>Students from all high schools, not just Los Altos High School, can participate. If you’ve already graduated from high school, you can’t participate, but you can come help mentor others.</p>
+                 </div>
             </div>
         </div>
 
@@ -233,30 +211,13 @@
                 <div class="flex-item-faq">
 
         <div class="panel panel-default">
-            <div class="panel-heading uppercase">
-                <h4 class="panel-title">I'm not from Los Altos High School, can I still participate?</h4>
-            </div>
-            <div id="faq-1" class="panel-collapse">
-                <div class="panel-body uppercase">
-                    <p>Yes! Any students from all high schools can participate. You do need a student id, though.</p>
-                </div>
-            </div>
-        </div>
-
-    </div>
-
-
-
-                <div class="flex-item-faq">
-
-        <div class="panel panel-default">
-            <div class="panel-heading uppercase">
+            <div class="panel-heading">
                 <h4 class="panel-title">What should I bring? Will I need my own laptop?</h4>
             </div>
             <div id="faq-1" class="panel-collapse">
-                <div class="panel-body uppercase">
-                    <p>All attendees are required to bring a valid student ID, which will be checked at registration. Bring your laptop, phone, hardware, chargers, or anything else you need for the weekend, since the Los Altos Hacks team will not be able to provide these for you. Power strips, ethernet cords, sleeping bags, and toiletries are highly recommended.</p>
-                </div>
+                <div class="panel-body text-left">
+                    <p>Bring a valid student ID for admission and anything else you might need for the weekend, such as a laptop, phone, or charger. Power strips, ethernet cables, sleeping bags, and toiletries are highly recommended.</p>
+                 </div>
             </div>
         </div>
 
@@ -267,14 +228,13 @@
                 <div class="flex-item-faq">
 
         <div class="panel panel-default">
-            <div class="panel-heading uppercase">
-                <h4 class="panel-title">When and how will I know that I’ve been accepted?</h4>
+            <div class="panel-heading">
+                <h4 class="panel-title">When can I apply and how will I know I’ve been accepted?</h4>
             </div>
             <div id="faq-1" class="panel-collapse">
-                <div class="panel-body uppercase">
-                    <p>Applications will go live during early October, and decisions will be sent out by late October.
-Please keep in mind that we are not only accepting those with coding abilities, so if you can’t code, that’s totally fine. We’re looking to put on a hackathon for people with differing skill levels.</p>
-                </div>
+                <div class="panel-body text-left">
+                    <p>Applications will begin early October, and decisions will be sent out by late October. We are accepting people regardless of experience, so you can participate even if you can’t code.</p>
+                 </div>
             </div>
         </div>
 
@@ -285,13 +245,30 @@ Please keep in mind that we are not only accepting those with coding abilities, 
                 <div class="flex-item-faq">
 
         <div class="panel panel-default">
-            <div class="panel-heading uppercase">
+            <div class="panel-heading">
                 <h4 class="panel-title">How do I form or join a team?</h4>
             </div>
             <div id="faq-1" class="panel-collapse">
-                <div class="panel-body uppercase">
-                    <p>You can either apply with your friends and specify on the application, or you can form teams the day of. If you don’t have a team, don’t worry! We’ll have a session where you can meet others and form teams. The maximum amount of people on a team is 4 people.</p>
-                </div>
+                <div class="panel-body text-left">
+                    <p>You can either specify your team on the application or form teams at the hackathon, where we’ll have a session for you to meet others. Each team can have a maximum of 4 people.</p>
+                 </div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+                <div class="flex-item-faq">
+
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">Can I get travel reimbursements?</h4>
+            </div>
+            <div id="faq-1" class="panel-collapse">
+                <div class="panel-body text-left">
+                    <p>Travel reimbursements will be provided on a case-by-case basis. Contact us at <a href="mailto:info@losaltoshacks.com">info@losaltoshacks.com</a>.</p>
+                 </div>
             </div>
         </div>
 
@@ -382,7 +359,7 @@ Please keep in mind that we are not only accepting those with coding abilities, 
   				<li class="flex-item">
  	<div class="team box">
 		<div class="inner">
-				<div class="avatar"><img src="img/ryan.JPG" alt="" class="img-responsive avatar-circle"></div>
+				<div class="avatar"><img src="img/ryan.jpg" alt="" class="img-responsive avatar-circle"></div>
 				<h3 class="uppercase">Ryan Huang</h3>
 		    <p class="subtitle uppercase" style="color:white;">Tech Team</p>
 		</div>
@@ -402,7 +379,7 @@ Please keep in mind that we are not only accepting those with coding abilities, 
   				<li class="flex-item">
  	<div class="team box">
 		<div class="inner">
-				<div class="avatar"><img src="img/zooey.jpg" alt="" class="img-responsive avatar-circle"></div>
+				<div class="avatar"><img src="img/zooey.png" alt="" class="img-responsive avatar-circle"></div>
 				<h3 class="uppercase">Zooey Nguyen</h3>
 		    <p class="subtitle uppercase" style="color:white;">Outreach Team</p>
 		</div>
@@ -474,22 +451,5 @@ Please keep in mind that we are not only accepting those with coding abilities, 
             </div>
         </div>
     </footer>
-
-    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;callback=GoogleMaps.load()"></script>
-    <script>
-        GoogleMaps.load();
-        // Bind to the click of all links with a #hash in the href
-        $('a[href^="#"]').click(function(e) {
-            // Prevent the jump and the #hash from appearing on the address bar
-            e.preventDefault();
-            // Scroll the window, stop any previous animation, stop on user manual scroll
-            // Check https://github.com/flesler/jquery.scrollTo for more customizability
-            $(window).stop(true).scrollTo(this.hash, {
-                duration: 800,
-                interrupt: true
-            });
-        });
-    </script>
-
     </body>
 </html>
