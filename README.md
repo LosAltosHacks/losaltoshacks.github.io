@@ -1,4 +1,4 @@
 # losaltoshacks.github.io
-Statified version of losaltoshacks.com-develop using [meteor-statify](https://github.com/Danappelxx/meteor-statify).
+Statified version of losaltoshacks.com-develop using [meteor-build-client](https://github.com/frozeman/meteor-build-client).
 
 To see the actual source, refer to the [development repository](https://github.com/losaltoshacks/losaltoshacks.com-develop).
