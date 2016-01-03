@@ -1,10 +1,10 @@
 [
     {
         "description": "Doors open!",
-        "date": "1451490300"
+        "date": 1451490300
     },
     {
         "description": "Doors close!",
-        "date": "1451490300"
+        "date": 1451490300
     }
 ]

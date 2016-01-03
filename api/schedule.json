@@ -2,11 +2,13 @@
     {
         "event": "Product Expo #1",
         "description": "Show off what you've built to other hackers!",
-        "date": "1451490300"
+        "date": 1451490300,
+        "location": "Cosmos"
     },
     {
         "event": "Product Expo #1",
         "description": "Show off what you've built to other hackers!",
-        "date": "1451490300"
+        "date": 1451490300,
+        "location": "Saturn"
     }
 ]
