@@ -1,6 +1,7 @@
 $(document).ready(function(){// Sticky Plugin v1.0.4 for jQuery
 // =============
 // Author: Anthony Garand
+// Improvements by Ryan Huang (NPN)
 // Improvements by German M. Bravo (Kronuz) and Ruud Kamphuis (ruudk)
 // Improvements by Leonardo C. Daronco (daronco)
 // Created: 02/14/2011
@@ -34,6 +35,9 @@ $(document).ready(function(){// Sticky Plugin v1.0.4 for jQuery
       getWidthFrom: '',
       widthFromWrapper: true, // works only when .getWidthFrom is empty
       responsiveWidth: false,
+
+      // See https://github.com/garand/sticky/commit/1685d1f4a611363bd23ed887afde8f1bee6ecb41
+      responsiveBreakpoint: 0,
       zIndex: 'auto'
     },
     $window = $(window),
@@ -53,8 +57,9 @@ $(document).ready(function(){// Sticky Plugin v1.0.4 for jQuery
 
         //update height in case of dynamic content
         s.stickyWrapper.css('height', s.stickyElement.outerHeight());
+        s.stickyElement.css('transform', 'translate3d(0px, 0px, 0px)');
 
-        if (scrollTop <= etse) {
+        if (scrollTop <= etse || $window.width() < s.responsiveBreakpoint) {
           if (s.currentTop !== null) {
             s.stickyElement
               .css({
@@ -286,6 +291,9 @@ $(document).ready(function(){// Sticky Plugin v1.0.4 for jQuery
   });
 }));
 $(document).ready(function(){
-    $("#navbar").sticky({topSpacing:0});
+    $("#navbar").sticky({
+        topSpacing: 0,
+        responsiveBreakpoint: 558
+    });
 });
 });
