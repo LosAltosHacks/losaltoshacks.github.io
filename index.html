@@ -1,64 +1,123 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
         <meta charset="utf-8">
-        <title>Los Altos Hacks</title>
+        <title>Los Altos Hacks II</title>
+        <link href="assets/stylesheets/normalize.css" rel="stylesheet" type="text/css" />
+        <link href="style.css" rel="stylesheet" type="text/css" />
+
         <meta name='viewport' content='width=device-width, initial-scale=1, maximum-scale=1'>
-        <link rel="icon" size="57x57" href="/favicon.jpg">
-        <link rel="apple-touch-icon" size="57x57" href="/favicon.jpg">
-
-        <link rel="stylesheet" href="style.css">
-
-        <script src="//code.jquery.com/jquery-2.2.3.min.js" integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo=" crossorigin="anonymous"></script>
-        <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-scrollTo/2.1.0/jquery.scrollTo.min.js" integrity="sha384-qcW5WaJ2LxU+EnijI93Po9K/D4whC1d/ZzKEXY8KJXRhT5qHdOQR/2AffpOrxFT3" crossorigin="anonymous"></script>
-        <script src="script.js" defer></script>
-
-        <meta property="og:title" content="Los Altos Hacks">
-        <meta property="og:type" content="website">
-        <meta property="og:url" content="http://www.losaltoshacks.com/">
-        <meta property="og:image" content="img/losaltoshacks.png">
-        <meta property="og:description" content="A 24-hour high school hackathon held in Mountain View, CA.">
+        <!-- <link rel="icon" size="57x57" href="img/favicon.jpg">
+        <link rel="apple-touch-icon" size="57x57" href="img/favicon.jpg"> -->
     </head>
     <body>
-        <div class="afterparty_wrapper">
-            <div class="hero">
-                <img src="img/bg.png" class="stretch" alt="">
-                <div class="overlay">
-                    <h1 class="desktop-banner">LOS ALTOS HACKS</h1>
-                    <h1 class="mobile-banner">LOS ALTOS<br>HACKS</h1>
-                    <a href="#" id="show-arrow" class="arrow"></a>
+        <section id="main">
+            <div class="content">
+                <div class="logo-container">
+                    <img class="logo" src="img/logo.svg" alt="Los Altos Hacks Logo" />
+                    <h1 id="title">Los Altos Hacks II</h1>
+
+                    <h3>February 4-5, 2017</h3>
                 </div>
             </div>
-            <div class="soon">
-                <h4 class="soon-tm-desktop">- LAH 2017 COMING SOON -</h4>
-                <h4 class="soon-tm-mobile">LAH 2017<br>- COMING SOON -</h4>
-                <div class="email-container">
-                    <input type="text" placeholder="email" class="email">
-                    <div class="email-spinner">
-                        <svg class="spinner hidden" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 161.2 161.2" enable-background="new 0 0 161.2 161.2" xml:space="preserve">
-                            <polyline class="checkmark inactive" fill="none" stroke="#46E8DE" stroke-width="12" stroke-linecap="round" stroke-miterlimit="10" stroke-dasharray="1000" stroke-dashoffset="0" points="113,52.8 74.1,108.4 48.2,86.4"/>
-                            <polyline class="cross inactive" fill="none" stroke="#E83518" stroke-width="12" stroke-linecap="round" stroke-miterlimit="10" stroke-dasharray="1000" stroke-dashoffset="0" points="50,50 110,110"/>
-                            <polyline class="cross inactive" fill="none" stroke="#E83518" stroke-width="12" stroke-linecap="round" stroke-miterlimit="10" stroke-dasharray="1000" stroke-dashoffset="0" points="50,110 110,50"/>
-                            <circle class="circle inactive" fill="none" stroke="#4DC4FF" stroke-width="10" stroke-miterlimit="10" stroke-dasharray="12.2175,12.2175" cx="80.6" cy="80.6" r="73.9">
-                        </svg>
+            <header id="navbar">
+                <ul class="horizontal">
+                    <li class="scroll-anchor"><a href="#tldr">FAQ</a></li>
+                    <li class="scroll-anchor"><a href="#supporters">Supporters</a></li>
+                    <li class="apply">
+                        <!-- Typeform -->
+                        <a class="typeform-share btn" href="https://losaltoshacks.typeform.com/to/n47s2D" data-mode="1" target="_blank">Apply</a>
+                    </li>
+                    <li class="sponsor"><a href="docs/sponsorship.pdf">Sponsor</a></li>
+                </ul>
+                <script defer>(function(){var qs,js,q,s,d=document,gi=d.getElementById,ce=d.createElement,gt=d.getElementsByTagName,id='typef_orm',b='https://s3-eu-west-1.amazonaws.com/share.typeform.com/';if(!gi.call(d,id)){js=ce.call(d,'script');js.id=id;js.src=b+'share.js';q=gt.call(d,'script')[0];q.parentNode.insertBefore(js,q)}id=id+'_';if(!gi.call(d,id)){qs=ce.call(d,'link');qs.rel='stylesheet';qs.id=id;qs.href=b+'share-button.css';s=gt.call(d,'head')[0];s.appendChild(qs,s)}})()</script>
+            </header>
+        </section>
+
+
+        <section id="tldr">
+            <div class="container">
+                <h1>What is Los Altos Hacks?</h1>
+                <p>
+                    Los Altos Hacks is the first hackathon run by students from Los Altos High School. A hackathon is an event where people can code a project together. At Los Altos Hacks, you will have 24 hours to make your idea a reality.
+                </p>
+                <div class="carousel flex-container">
+                    <div class="img-container left">
+                        <img class="img-responsive" src="img/img1.jpg" alt="Opening Ceremony" />
+                        <h3>Opening Ceremony</h3>
+                    </div>
+                    <div class="img-container">
+                        <img class="img-responsive" src="img/img2.jpg" alt="Teams Working" />
+                        <h3>Teams Working</h3>
+                    </div>
+                    <div class="img-container right">
+                        <img class="img-responsive" src="img/img3.jpg" alt="Demos" />
+                        <h3>Demos</h3>
                     </div>
                 </div>
-                <button class="submit">Get Notified!</button>
+
+        <!-- <section id=""> -->
+                    <div>
+                        <h2 class="faq-question">Who can participate?</h2>
+                        <p class="faq-answer">Any high school student can participate. If you’ve already graduated from high school, you can’t participate, but you can come help mentor others.</p>
+                    </div>
+                    <div>
+                        <h2 class="faq-question">Does this cost money?</h2>
+                        <p class="faq-answer">No! Los Altos Hacks is free for all participants — all food, swag, and other costs are covered.</p>
+                    </div>
+                    <div>
+                        <h2 class="faq-question">What if I can&#39;t code?</h2>
+                        <p class="faq-answer">No problem! We are accepting people regardless of experience. Plus, we'll have workshops where you can learn.</p>
+                    </div>
+                    <div>
+                        <h2 class="faq-question">What should I bring? Will I need my own laptop?</h2>
+                        <p class="faq-answer">Bring a valid student ID for admission and your laptop, phone, chargers, etc. We will not provide laptops or chargers for you. Power strips, ethernet cables, sleeping bags, and toiletries are highly recommended.</p>
+                    </div>
+                    <div>
+                        <h2 class="faq-question">How do I form or join a team?</h2>
+                        <p class="faq-answer">You can either specify your team on the application or form teams at the hackathon, where we’ll have a session for you to meet others. Each team can have a maximum of 4 people.</p>
+                    </div>
+                    <div>
+                        <h2 class="faq-question">What if I still have a question?</h2>
+                        <p class="faq-answer">Contact us at <a href="mailto:info@losaltoshacks.com">info@losaltoshacks.com</a>.</p>
+                    </div>
             </div>
-            <div id="ap-stats">
-                <h1 class="stats-title"><a class="stats-title" href="/2016">LAH 2016</a></h1>
-                <h3 class="stats-subtitle">JAN. 30-31</h3>
-                <div class="participants">
-                    <h1 class="hacker-count">176 HACKERS</h1>
-                    <h1 class="mentor-count">50 MENTORS</h1>
+        <!-- </section> -->
+
+        </section>
+
+        <section id="supporters">
+            <div class="container">
+                <h1>Supporters</h1>
+                <h2>Community Partners</h2>
+                <div class="flex-container">
+                        <a href="http://hacker.fund/">
+                            <img src="img/hackerfund.png" alt="Hacker Fund" class="img-responsive supporter-image">
+                        </a>
                 </div>
-                <div class="prizes">
-                    <h1>$2540 IN PRIZES</h1>
-                </div>
-                <div class="projects">
-                    <a href="http://losaltoshacks.devpost.com/submissions">35 HACKS</a>
+                <div id="supporters-shoutout">
+                    <p>Interested in supporting us?</p>
+                    <a href="docs/sponsorship.pdf">Docs</a>
+                    <a href="mailto:sponsor@losaltoshacks.com">Email</a>
                 </div>
             </div>
-        </div>
+        </section>
+
+        <script src="https://code.jquery.com/jquery-3.1.0.slim.min.js" integrity="sha256-cRpWjoSOw5KcyIOaZNo4i6fZ9tKPhYYb6i5T9RSVJG8=" crossorigin="anonymous"></script>
+        <script type="text/javascript" src="script.js"></script>
+
+        </script>
+
+        <footer>
+            <a class="left" href="/2016">Visit 2016</a>
+
+            <div class="right">
+                <a class="social-media">Find us on:</a>
+                <a href="http://facebook.com/losaltoshacks">Facebook</a>
+                <a href="http://twitter.com/losaltoshacks">Twitter</a>
+                <a href="http://instagram.com/losaltoshacks">Instagram</a>
+            </div>
+
+        </footer>
     </body>
 </html>
