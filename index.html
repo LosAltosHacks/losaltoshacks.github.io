@@ -13,6 +13,7 @@
     </head>
     <body>
         <section id="main">
+            <!-- <canvas id="canvas"></canvas> -->
             <div class="content">
                 <div class="logo-container">
                     <img class="logo" src="img/logo.svg" alt="Los Altos Hacks Logo" />
@@ -40,13 +41,13 @@
 
         <section id="tldr">
             <div class="container">
-                <h1>What is Los Altos Hacks?</h1>
-                <p>
+                <h1 id="tldr-title">What is Los Altos Hacks?</h1>
+                <p id="tldr-desc">
                     Los Altos Hacks is a hackathon run by students from Los Altos High School.
                     A hackathon is an event where people can code a project together.
                     At Los Altos Hacks, you will have 24 hours to make your idea a reality.
                 </p>
-                <div class="carousel flex-container">
+                <div class="carousel flex-container-carousel">
                     <div class="img-container left">
                         <img class="img-responsive" src="img/img1.jpg" alt="Opening Ceremony" />
                         <h3>Opening Ceremony</h3>
@@ -62,7 +63,7 @@
                 </div>
 
         <!-- <section id=""> -->
-                <div class="flex-container-students">
+                <div class="flex-container-faq">
                         <div class="faq">
                             <h2 class="faq-question">Who can participate?</h2>
                             <p class="faq-answer">Any high school student can participate. If you’ve already graduated from high school, you can’t participate, but you can come help mentor others.</p>
@@ -70,6 +71,10 @@
                         <div class="faq">
                             <h2 class="faq-question">How do I form or join a team?</h2>
                             <p class="faq-answer">You can either specify your team on the application or form teams at the hackathon, where we’ll have a session for you to meet others. Each team can have a maximum of 4 people.</p>
+                        </div>
+                        <div class="faq">
+                            <h2 class="faq-question">How many people will be there?</h2>
+                            <p class="faq-answer">We're hoping for around 350 attendees this year with a 50:50 gender ratio.</p>
                         </div>
                         <div class="faq">
                             <h2 class="faq-question">Does this cost money?</h2>
@@ -99,25 +104,46 @@
                 <h1>Supporters</h1>
                 <div class="shoutout sponsor">
                     <p>Interested in supporting us?</p>
-                    <a href="docs/sponsorship.pdf">Read our docs</a>
-                    <a href="mailto:sponsor@losaltoshacks.com" class="email-button">Send us an email</a>
+                    <a href="docs/sponsorship.pdf">
+                        <i class="fa fa-book" aria-hidden="true"></i>
+                        &nbsp;Read our docs
+                    </a>
+                    <a href="mailto:sponsor@losaltoshacks.com" class="email-button">
+                        <i class="fa fa-envelope" aria-hidden="true"></i>
+                        &nbsp;Send us an email
+                    </a>
                 </div>
 
-                <div class="flex-container">
+                <div class="flex-container-supporters">
+                        <a href="http://adobe.com">
+                            <img src="img/supporters/adobe.png" alt="Abobe" class="img-responsive supporter-image sponsor">
+                        </a>
+                        <a href="http://redislabs.com">
+                            <img src="img/supporters/redis.png" alt="Redis Labs" class="img-responsive supporter-image sponsor">
+                        </a>
                         <a href="https://hacker.fund/">
-                            <img src="img/hackerfund.png" alt="Hacker Fund" class="img-responsive supporter-image">
+                            <img src="img/supporters/hackerfund.png" alt="Hacker Fund" class="img-responsive supporter-image partner">
                         </a>
                         <a href="https://namecheap.com/">
-                            <img src="img/namecheap.png" alt="Namecheap" class="img-responsive supporter-image">
+                            <img src="img/supporters/namecheap.png" alt="namecheap" class="img-responsive supporter-image donor">
                         </a>
                         <a href="https://lob.com">
-                            <img src="img/lob.png" alt="Lob" class="img-responsive supporter-image">
+                            <img src="img/supporters/lob.png" alt="Lob" class="img-responsive supporter-image donor">
                         </a>
                         <a href="http://wolframalpha.com/">
-                            <img src="img/wolfram.png" alt="Wolfram Alpha" class="img-responsive supporter-image">
+                            <img src="img/supporters/wolfram.png" alt="Wolfram Alpha" class="img-responsive supporter-image donor">
                         </a>
                         <a href="https://stickermule.com/">
-                            <img src="img/stickermule.png" alt="Stickermule" class="img-responsive supporter-image">
+                            <img src="img/supporters/stickermule.png" alt="Stickermule" class="img-responsive supporter-image donor">
+                        </a>
+                        <a href="https://kloudless.com/">
+                            <img src="img/supporters/kloudless.png" alt="Kloudless" class="img-responsive supporter-image donor">
+                        </a>
+                        <a href="http://ea.com">
+                            <img src="img/supporters/ea.png" alt="EA" class="img-responsive supporter-image donor">
+                        </a>
+                        <a href="http://codeforfun.com">
+                            <img src="img/supporters/codeforfun.png" alt="Code for Fun" class="img-responsive supporter-image donor">
                         </a>
                 </div>
             </div>
@@ -128,98 +154,164 @@
                 <h1>Student Representatives</h1>
                 <div class="shoutout">
                     <p>Interested in representing LAH at your school?</p>
-                    <a href="mailto:info@losaltoshacks.com">Send us an email</a>
+                    <a href="mailto:info@losaltoshacks.com">
+                        <i class="fa fa-envelope" aria-hidden="true"></i>
+                        &nbsp;Send us an email
+                    </a>
                 </div>
-                <div class="flex-container">
+                <div class="flex-container-students">
 
                         <div class="student">
+                            <div class="student-img-container">
+                                <img src="img/students/AlveeraKhan.jpg" class="student-img" alt="Alveera Khan" />
+                            </div>
                             <h2 class="student-name">Alveera Khan</h2>
                             <h4 class="student-school">Evergreen Valley High School</h4>
                             <!-- <h4 class="student-affiliation">Girls Who Code</h4> -->
                         </div>
 
                         <div class="student">
+                            <div class="student-img-container">
+                                <img src="img/students/NikhilCheerla.jpg" class="student-img" alt="Nikhil Cheerla" />
+                            </div>
                             <h2 class="student-name">Nikhil Cheerla</h2>
                             <h4 class="student-school">Monta Vista High School</h4>
                             <!-- <h4 class="student-affiliation">Computer Science Club</h4> -->
                         </div>
 
                         <div class="student">
+                            <div class="student-img-container">
+                                <img src="img/students/NikashKhanna.jpg" class="student-img" alt="Nikash Khanna" />
+                            </div>
                             <h2 class="student-name">Nikash Khanna</h2>
                             <h4 class="student-school">Monta Vista High School</h4>
                             <!-- <h4 class="student-affiliation">Web Dev Club</h4> -->
                         </div>
 
                         <div class="student">
+                            <div class="student-img-container">
+                                <img src="img/students/AkiPraveen.jpg" class="student-img" alt="Aki Praveen" />
+                            </div>
                             <h2 class="student-name">Aki Praveen</h2>
                             <h4 class="student-school">Cupertino High School</h4>
                             <!-- <h4 class="student-affiliation">Tinovation Club</h4> -->
                         </div>
 
                         <div class="student">
+                            <div class="student-img-container">
+                                <img src="img/students/VanditaPendse.jpg" class="student-img" alt="Vandita Pendse" />
+                            </div>
                             <h2 class="student-name">Vandita Pendse</h2>
                             <h4 class="student-school">Mountain View High School</h4>
                             <!-- <h4 class="student-affiliation">Girls Who Code</h4> -->
                         </div>
 
                         <div class="student">
+                            <div class="student-img-container">
+                                <img src="img/students/ParthPendurkar.jpg" class="student-img" alt="Parth Pendurkar" />
+                            </div>
                             <h2 class="student-name">Parth Pendurkar</h2>
                             <h4 class="student-school">Harker High School</h4>
                             <!-- <h4 class="student-affiliation">Harker Programming Club</h4> -->
                         </div>
 
                         <div class="student">
-                            <h2 class="student-name">Val Chuong</h2>
+                            <div class="student-img-container">
+                                <img src="img/students/ValChoung.jpg" class="student-img" alt="Val Choung" />
+                            </div>
+                            <h2 class="student-name">Val Choung</h2>
                             <h4 class="student-school">Mission San Jose</h4>
                             <!-- <h4 class="student-affiliation">Computer Science Club</h4> -->
                         </div>
 
                         <div class="student">
+                            <div class="student-img-container">
+                                <img src="img/students/SamuelEscapa.jpg" class="student-img" alt="Samuel Escapa" />
+                            </div>
                             <h2 class="student-name">Samuel Escapa</h2>
                             <h4 class="student-school">San Mateo High School</h4>
                             <!-- <h4 class="student-affiliation">Programming Club</h4> -->
                         </div>
 
                         <div class="student">
+                            <div class="student-img-container">
+                                <img src="img/students/NikitaAshok.jpg" class="student-img" alt="Nikita Ashok" />
+                            </div>
                             <h2 class="student-name">Nikita Ashok</h2>
                             <h4 class="student-school">American High School</h4>
                             <!-- <h4 class="student-affiliation">DECA</h4> -->
                         </div>
 
                         <div class="student">
+                            <div class="student-img-container">
+                                <img src="img/students/RishabhMeswani.jpg" class="student-img" alt="Rishabh Meswani" />
+                            </div>
                             <h2 class="student-name">Rishabh Meswani</h2>
                             <h4 class="student-school">Irvington High School</h4>
                             <!-- <h4 class="student-affiliation">Hackathons</h4> -->
                         </div>
 
                         <div class="student">
+                            <div class="student-img-container">
+                                <img src="img/students/DevinMui.jpg" class="student-img" alt="Devin Mui" />
+                            </div>
                             <h2 class="student-name">Devin Mui</h2>
                             <h4 class="student-school">Dublin High School</h4>
                             <!-- <h4 class="student-affiliation">DHS Build Club</h4> -->
                         </div>
 
                         <div class="student">
+                            <div class="student-img-container">
+                                <img src="img/students/ManasiMaheshwari.jpg" class="student-img" alt="Manasi Maheshwari" />
+                            </div>
                             <h2 class="student-name">Manasi Maheshwari</h2>
                             <h4 class="student-school">American High School</h4>
                             <!-- <h4 class="student-affiliation">Girls Who Code</h4> -->
                         </div>
 
                         <div class="student">
+                            <div class="student-img-container">
+                                <img src="img/students/RuchiShah.jpg" class="student-img" alt="Ruchi Shah" />
+                            </div>
                             <h2 class="student-name">Ruchi Shah</h2>
                             <h4 class="student-school">Cupertino High School</h4>
                             <!-- <h4 class="student-affiliation">Programming Club</h4> -->
                         </div>
 
                         <div class="student">
+                            <div class="student-img-container">
+                                <img src="img/students/KimberlyZhu.jpg" class="student-img" alt="Kimberly Zhu" />
+                            </div>
+                            <h2 class="student-name">Kimberly Zhu</h2>
+                            <h4 class="student-school">Cupertino High School</h4>
+                            <!-- <h4 class="student-affiliation">Girls Who Code</h4> -->
+                        </div>
+
+                        <div class="student">
+                            <div class="student-img-container">
+                                <img src="img/students/SaraSubbanna.jpg" class="student-img" alt="Sara Subbanna" />
+                            </div>
                             <h2 class="student-name">Sara Subbanna</h2>
                             <h4 class="student-school">BASIS High School</h4>
                             <!-- <h4 class="student-affiliation">Base Hacks</h4> -->
                         </div>
 
                         <div class="student">
+                            <div class="student-img-container">
+                                <img src="img/students/NidhiJain.jpg" class="student-img" alt="Nidhi Jain" />
+                            </div>
                             <h2 class="student-name">Nidhi Jain</h2>
                             <h4 class="student-school">Saratoga High School</h4>
                             <!-- <h4 class="student-affiliation">Girls Who Code</h4> -->
+                        </div>
+
+                        <div class="student">
+                            <div class="student-img-container">
+                                <img src="img/students/MokshJawa.jpg" class="student-img" alt="Moksh Jawa" />
+                            </div>
+                            <h2 class="student-name">Moksh Jawa</h2>
+                            <h4 class="student-school">Washington High School</h4>
+                            <!-- <h4 class="student-affiliation">WHS Coding Club</h4> -->
                         </div>
                 </div>
             </div>
@@ -227,6 +319,7 @@
 
         <script src="https://use.fontawesome.com/da7c8e76c3.js"></script>
         <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
+        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/randomcolor/0.4.4/randomColor.js"></script> -->
         <script type="text/javascript" src="script.js"></script>
 
         <footer>
