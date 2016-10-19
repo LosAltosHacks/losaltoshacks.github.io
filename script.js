@@ -319,11 +319,7 @@ $(document).ready(function(){
 //
 //         this.numRows = Math.floor(this.canvas.width / this.sideLength) + 1;
 //         this.numCols = Math.floor(this.canvas.height / this.sideLength) + 1;
-<<<<<<< b100f5a8b4fa3e6a3fa5ac15993b91eaeca76724
-//
-=======
 // 
->>>>>>> Update static
 //         console.log(this.numRows, this.numCols);
 //
 //         // this.context.fillRect(0, 0, this.canvas.width, this.canvas.height);
