@@ -1564,7 +1564,8 @@ function toString(v)
 	var type = typeof v;
 	if (type === 'function')
 	{
-		return '<function>';
+		var name = v.func ? v.func.name : v.name;
+		return '<function' + (name === '' ? '' : ':') + name + '>';
 	}
 
 	if (type === 'boolean')
@@ -2071,13 +2072,6 @@ var _elm_lang$core$List$sortWith = _elm_lang$core$Native_List.sortWith;
 var _elm_lang$core$List$sortBy = _elm_lang$core$Native_List.sortBy;
 var _elm_lang$core$List$sort = function (xs) {
 	return A2(_elm_lang$core$List$sortBy, _elm_lang$core$Basics$identity, xs);
-};
-var _elm_lang$core$List$singleton = function (value) {
-	return {
-		ctor: '::',
-		_0: value,
-		_1: {ctor: '[]'}
-	};
 };
 var _elm_lang$core$List$drop = F2(
 	function (n, list) {
@@ -3559,8 +3553,15 @@ function setupIncomingPort(name, callback)
 		sentBeforeInit.push(value);
 	}
 
-	function postInitSend(value)
+	function postInitSend(incomingValue)
 	{
+		var result = A2(_elm_lang$core$Json_Decode$decodeValue, converter, incomingValue);
+		if (result.ctor === 'Err')
+		{
+			throw new Error('Trying to send an unexpected type of value through port `' + name + '`:\n' + result._0);
+		}
+
+		var value = result._0;
 		var temp = subs;
 		while (temp.ctor !== '[]')
 		{
@@ -3571,13 +3572,7 @@ function setupIncomingPort(name, callback)
 
 	function send(incomingValue)
 	{
-		var result = A2(_elm_lang$core$Json_Decode$decodeValue, converter, incomingValue);
-		if (result.ctor === 'Err')
-		{
-			throw new Error('Trying to send an unexpected type of value through port `' + name + '`:\n' + result._0);
-		}
-
-		currentSend(result._0);
+		currentSend(incomingValue);
 	}
 
 	return { send: send };
@@ -4198,7 +4193,7 @@ function endsWith(sub, str)
 function indexes(sub, str)
 {
 	var subLen = sub.length;
-
+	
 	if (subLen < 1)
 	{
 		return _elm_lang$core$Native_List.Nil;
@@ -4211,78 +4206,74 @@ function indexes(sub, str)
 	{
 		is.push(i);
 		i = i + subLen;
-	}
-
+	}	
+	
 	return _elm_lang$core$Native_List.fromArray(is);
 }
-
 
 function toInt(s)
 {
 	var len = s.length;
-
-	// if empty
 	if (len === 0)
 	{
-		return intErr(s);
+		return _elm_lang$core$Result$Err("could not convert string '" + s + "' to an Int" );
 	}
-
-	// if hex
-	var c = s[0];
-	if (c === '0' && s[1] === 'x')
+	var start = 0;
+	if (s[0] === '-')
 	{
-		for (var i = 2; i < len; ++i)
+		if (len === 1)
 		{
-			var c = s[i];
-			if (('0' <= c && c <= '9') || ('A' <= c && c <= 'F') || ('a' <= c && c <= 'f'))
-			{
-				continue;
-			}
-			return intErr(s);
+			return _elm_lang$core$Result$Err("could not convert string '" + s + "' to an Int" );
 		}
-		return _elm_lang$core$Result$Ok(parseInt(s, 16));
+		start = 1;
 	}
-
-	// is decimal
-	if (c > '9' || (c < '0' && c !== '-' && c !== '+'))
-	{
-		return intErr(s);
-	}
-	for (var i = 1; i < len; ++i)
+	for (var i = start; i < len; ++i)
 	{
 		var c = s[i];
 		if (c < '0' || '9' < c)
 		{
-			return intErr(s);
+			return _elm_lang$core$Result$Err("could not convert string '" + s + "' to an Int" );
 		}
 	}
-
 	return _elm_lang$core$Result$Ok(parseInt(s, 10));
 }
 
-function intErr(s)
-{
-	return _elm_lang$core$Result$Err("could not convert string '" + s + "' to an Int");
-}
-
-
 function toFloat(s)
 {
-	// check if it is a hex, octal, or binary number
-	if (s.length === 0 || /[\sxbo]/.test(s))
+	var len = s.length;
+	if (len === 0)
 	{
-		return floatErr(s);
+		return _elm_lang$core$Result$Err("could not convert string '" + s + "' to a Float" );
 	}
-	var n = +s;
-	// faster isNaN check
-	return n === n ? _elm_lang$core$Result$Ok(n) : floatErr(s);
+	var start = 0;
+	if (s[0] === '-')
+	{
+		if (len === 1)
+		{
+			return _elm_lang$core$Result$Err("could not convert string '" + s + "' to a Float" );
+		}
+		start = 1;
+	}
+	var dotCount = 0;
+	for (var i = start; i < len; ++i)
+	{
+		var c = s[i];
+		if ('0' <= c && c <= '9')
+		{
+			continue;
+		}
+		if (c === '.')
+		{
+			dotCount += 1;
+			if (dotCount <= 1)
+			{
+				continue;
+			}
+		}
+		return _elm_lang$core$Result$Err("could not convert string '" + s + "' to a Float" );
+	}
+	return _elm_lang$core$Result$Ok(parseFloat(s));
 }
-
-function floatErr(s)
-{
-	return _elm_lang$core$Result$Err("could not convert string '" + s + "' to a Float");
-}
-
 
 function toList(str)
 {
@@ -5770,6 +5761,11 @@ function badToString(problem)
 				problem = problem.rest;
 				break;
 
+			case 'index':
+				context += '[' + problem.index + ']';
+				problem = problem.rest;
+				break;
+
 			case 'oneOf':
 				var problems = problem.problems;
 				for (var i = 0; i < problems.length; i++)
@@ -6497,9 +6493,9 @@ function on(name, options, decoder)
 
 function equalEvents(a, b)
 {
-	if (a.options !== b.options)
+	if (!a.options === b.options)
 	{
-		if (a.options.stopPropagation !== b.options.stopPropagation || a.options.preventDefault !== b.options.preventDefault)
+		if (a.stopPropagation !== b.stopPropagation || a.preventDefault !== b.preventDefault)
 		{
 			return false;
 		}
@@ -7775,7 +7771,7 @@ function normalRenderer(parentNode, view)
 var rAF =
 	typeof requestAnimationFrame !== 'undefined'
 		? requestAnimationFrame
-		: function(callback) { setTimeout(callback, 1000 / 60); };
+		: function(callback) { callback(); };
 
 function makeStepper(domNode, view, initialVirtualNode, eventNode)
 {
@@ -9005,7 +9001,7 @@ var _losaltoshacks$dummy$Main$view = function (model) {
 										},
 										{
 											ctor: '::',
-											_0: _elm_lang$html$Html$text('Schedule'),
+											_0: model.scheduleLoaded ? (_elm_lang$core$List$isEmpty(model.schedule) ? _elm_lang$html$Html$text('No events yet') : _elm_lang$html$Html$text('Schedule')) : _elm_lang$html$Html$text('Schedule loading...'),
 											_1: {ctor: '[]'}
 										}),
 									_1: {
@@ -9059,7 +9055,7 @@ var _losaltoshacks$dummy$Main$view = function (model) {
 												},
 												{
 													ctor: '::',
-													_0: _elm_lang$html$Html$text('Updates'),
+													_0: model.updatesLoaded ? (_elm_lang$core$List$isEmpty(model.updates) ? _elm_lang$html$Html$text('No updates yet') : _elm_lang$html$Html$text('Updates')) : _elm_lang$html$Html$text('Updates loading...'),
 													_1: {ctor: '[]'}
 												}),
 											_1: {ctor: '[]'}
@@ -9075,16 +9071,18 @@ var _losaltoshacks$dummy$Main$view = function (model) {
 };
 var _losaltoshacks$dummy$Main$schedule = _elm_lang$core$Native_Platform.incomingPort('schedule', _elm_lang$core$Json_Decode$value);
 var _losaltoshacks$dummy$Main$updates = _elm_lang$core$Native_Platform.incomingPort('updates', _elm_lang$core$Json_Decode$value);
-var _losaltoshacks$dummy$Main$Model = F2(
-	function (a, b) {
-		return {schedule: a, updates: b};
+var _losaltoshacks$dummy$Main$Model = F4(
+	function (a, b, c, d) {
+		return {schedule: a, scheduleLoaded: b, updates: c, updatesLoaded: d};
 	});
 var _losaltoshacks$dummy$Main$init = {
 	ctor: '_Tuple2',
-	_0: A2(
+	_0: A4(
 		_losaltoshacks$dummy$Main$Model,
 		{ctor: '[]'},
-		{ctor: '[]'}),
+		false,
+		{ctor: '[]'},
+		false),
 	_1: _elm_lang$core$Platform_Cmd$none
 };
 var _losaltoshacks$dummy$Main$ScheduleItem = F4(
@@ -9121,7 +9119,7 @@ var _losaltoshacks$dummy$Main$update = F2(
 					ctor: '_Tuple2',
 					_0: _elm_lang$core$Native_Utils.update(
 						model,
-						{schedule: _p1._0}),
+						{schedule: _p1._0, scheduleLoaded: true}),
 					_1: _elm_lang$core$Platform_Cmd$none
 				};
 			} else {
@@ -9134,7 +9132,7 @@ var _losaltoshacks$dummy$Main$update = F2(
 					ctor: '_Tuple2',
 					_0: _elm_lang$core$Native_Utils.update(
 						model,
-						{updates: _p2._0}),
+						{updates: _p2._0, updatesLoaded: true}),
 					_1: _elm_lang$core$Platform_Cmd$none
 				};
 			} else {
