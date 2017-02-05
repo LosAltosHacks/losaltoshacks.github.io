@@ -9128,11 +9128,26 @@ var _losaltoshacks$dummy$Main$update = F2(
 		} else {
 			var _p2 = A2(_elm_lang$core$Json_Decode$decodeValue, updatesDecoder, _p0._0);
 			if (_p2.ctor === 'Ok') {
+				var descComp = F2(
+					function (a, b) {
+						var _p3 = A2(_elm_lang$core$Basics$compare, a.time, b.time);
+						switch (_p3.ctor) {
+							case 'LT':
+								return _elm_lang$core$Basics$GT;
+							case 'EQ':
+								return _elm_lang$core$Basics$EQ;
+							default:
+								return _elm_lang$core$Basics$LT;
+						}
+					});
 				return {
 					ctor: '_Tuple2',
 					_0: _elm_lang$core$Native_Utils.update(
 						model,
-						{updates: _p2._0, updatesLoaded: true}),
+						{
+							updates: A2(_elm_lang$core$List$sortWith, descComp, _p2._0),
+							updatesLoaded: true
+						}),
 					_1: _elm_lang$core$Platform_Cmd$none
 				};
 			} else {
