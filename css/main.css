@@ -1,7 +1,7 @@
 :root {
 	color: rgba(0, 0, 0, 0.9);
 	font-size: calc(12px + 1vw);
-	font-family: "Open Sans", sans-serif;
+	font-family: "DIN", "Open Sans", sans-serif;
 	--site-width: 950px;
 	--side-padding: calc((100vw - var(--site-width)) / 2);
 	--nav-background-color: rgba(240, 245, 255, 0.9);
@@ -43,7 +43,8 @@ img, canvas {
 }
 
 h1 {
-	font-size: 2em;
+	font-family: "DIN";
+	font-size: 3rem;
 	text-transform: uppercase;
 }
 
@@ -59,7 +60,7 @@ nav {
 		transparent
 	);
 	box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.1);
-	
+
 	position: fixed;
 	top: 0;
 	width: 100vw;
