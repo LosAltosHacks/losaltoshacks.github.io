@@ -1,176 +1,163 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Los Altos Hacks III - High School Hackathon</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link href="css/main.css" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700" rel="stylesheet">
+	</head>
+	<body>
+		<header>
+			<nav>
+				<a id="logo" href="#"></a>
+				<ul>
+					<li><a href="#about">About</a></li>
+					<li><a href="#faq">FAQ</a></li>
+					<li><a href="#sponsors">Sponsors</a></li>
+					<li><a href="#team">Team</a></li>
+					<li><a href="#schedule">Schedule</a></li>
+				</ul>
+			</nav>
+		</header>
+		<main>
+			<section id="top">
+				<canvas id="top-canvas"></canvas>
+				<div class="row">
+					<div>
+						<!--<img id="teaser-animation" src="images/LA-III.gif">-->
+						<canvas id="teaser-animation">
+					</div>
+					<div>
+						<h1>Los Altos Hacks III</h1>
+						<p>
+							<date>February 3 - 4, 2018</date>
+							<br>
+							Evernote Campus
+						</p>
+						<div id="apply">
+							<h2>Apply:</h2>
+							<div>
+								<a href="" class="hacker">Hacker</a>
+								<a href="" class="mentor">Mentor</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section id="about">
+				<div class="row">
+					<div>
+						<h2>Los Altos' third annual high school hackathon</h2>
+						<p>We bring together hundreds of high school students from across the Bay Area to work together and make their ideas into reality.</p>
+						<p>We'll provide the food, refreshments and hacking spaces for you, the hackers, to do your magic. Just bring your ideas and your passion!</p>
+					</div>
+				</div>
+			</section>
+			<section id="faq">
+				<div class="row">
+					<div>
+						<h2>FAQ</h2>
+						<div class="faq-wrapper row">
+							<div>
+								<h3>Who can attend?</h3>
+								<p>All students are welcome! This includes university undergrads, graduate students, and high school students. Whether you're building your first website, dabbling in Photoshop, or hacking with an Oculus Rift, LA Hacks welcomes you.</p>
+							</div>
+							<div>
+								<h3>How much will this cost?</h3>
+								<p>Admission is free for all hackers! That includes food, drinks, and transportation for some schools in California. Those living outside of California are still encouraged to apply and reimbursements tor travel will be granted on a case by case basis.</p>
+							</div>
+							<div>
+								<h3>What can my team build?</h3>
+								<p>Whatever hardware, software. or technology-related projects you and your team can come up with! Projects will be judged based on creativity, technical difficulty, polish, and usefulness.</p>
+							</div>
+							<div>
+								<h3>How do teams work?</h3>
+								<p>Teams may contain up to 4 people. If you don't have a team prior to LA Hacks, that's completely fine. We will be holding a teams matching session at the beginning of the hacking period. You can also compete alone, but that's a lot less fun!</p>
+							</div>
+							<div>
+								<h3>I have another question...</h3>
+								<p>We're here for you! Send us an email at <a href="mailto:info@losaltoshacks.com">info@losaltoshacks.com</a> or feel tree to reach out to us on <a href="https://twitter.com/losaltoshacks" target="_blank">Twitter</a> or <a href="https://www.facebook.com/losaltoshacks/" target="_blank">Facebook</a>.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section id="sponsors">
+				<div class="row">
+					<div>
+					<h2>Our Sponsors</h2>
+					<div class="row small-columns">
+						<a href=""><img src="https://lorempixel.com/300/200/abstract/1" title="An Awesome Sponsor"></a>
+						<a href=""><img src="https://lorempixel.com/300/200/abstract/2" title="An Awesome Sponsor"></a>
+						<a href=""><img src="https://lorempixel.com/300/200/abstract/3" title="An Awesome Sponsor"></a>
+						<a href=""><img src="https://lorempixel.com/300/200/abstract/4" title="An Awesome Sponsor"></a>
+						<a href=""><img src="https://lorempixel.com/300/200/abstract/5" title="An Awesome Sponsor"></a>
+						<a href=""><img src="https://lorempixel.com/300/200/abstract/6" title="An Awesome Sponsor"></a>
+						<a href=""><img src="https://lorempixel.com/300/200/abstract/7" title="An Awesome Sponsor"></a>
+						<a href=""><img src="https://lorempixel.com/300/200/abstract/8" title="An Awesome Sponsor"></a>
+					</div>
 
-<head>
-    <meta charset="utf-8">
-    <title>Los Altos Hacks II</title>
-    <link href="/style.css" rel="stylesheet" type="text/css">
-
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-
-    <meta property="og:title" content="Los Altos Hacks II" />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="http://www.losaltoshacks.com/" />
-    <meta property="og:image" content="http://www.losaltoshacks.com/img/social-media.jpg" />
-    <meta property="og:description" content="A 24-hour high school hackathon." />
-
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:site" content="@losaltoshacks">
-    <meta name="twitter:title" content="Los Altos Hacks II">
-    <meta name="twitter:description" content="A 24-hour high school hackathon.">
-    <meta name="twitter:image" content="http://www.losaltoshacks.com/img/social-media.jpg">
-
-    <link rel="shortcut icon" href="/favicon.ico">
-    <link rel="icon" type="image/png" href="/favicon.png">
-    <link rel="apple-touch-icon" href="/touch-icon.png">
-
-    <script src="https://use.fontawesome.com/da7c8e76c3.js" async></script>
-    <script src="script.js" async></script>
-</head>
-
-<body>
-    <section id="main">
-        <div class="content">
-            <div class="logo-container">
-                <img class="logo" src="img/logo.png" alt="Los Altos Hacks Logo">
-                <p id="thanks-message">Thank you to all our sponsors, mentors and hackers for making Los Altos Hacks II possible.</p>
-                <p id="byline">- The Los Altos Hacks Team</p>
-            </div>
-        </div>
-        <header id="navbar">
-            <ul class="horizontal">
-                <li class="scroll-anchor"><a href="#stats">Stats</a></li>
-                <li class="scroll-anchor"><a href="#winners">Winners</a></li>
-                <li class="scroll-anchor"><a href="#supporters">Supporters</a></li>
-            </ul>
-        </header>
-    </section>
-
-    <section id="stats">
-        <div class="container">
-            <h1>Statistics</h1>
-
-            <div class="flex-container">
-                <div class="stat">
-                    <h2><span class="bg-blue">300</span>attendees</h2>
-                </div>
-                <div class="stat">
-                    <h2><span class="bg-indigo">30</span>mentors</h2>
-                </div>
-                <div class="stat">
-                    <h2><span class="bg-orange">2:3</span>gender diversity</h2>
-                </div>
-                <div class="stat">
-                    <h2><span class="bg-green">$1,800</span>in prizes</h2>
-                </div>
-                <div class="stat">
-                    <h2><span class="bg-red">60</span>projects submitted</h2>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="winners">
-        <div class="container">
-            <h1>WINNERS</h1>
-            <a class="winner-project-name"></a>
-            <div class="winner-carousel">
-                <img src="img/prizes/first-place.jpg" alt="SMS Maps" data-link="https://devpost.com/software/sms-maps">
-                <img src="img/prizes/second-place.jpg" alt="Oratory" data-link="https://devpost.com/software/oratory">
-                <img src="img/prizes/third-place.jpg" alt="Anti-Hate Keyboard" data-link="https://devpost.com/software/anti-hate-keyboard">
-                <img src="img/prizes/best-wolfram.jpg" alt="MatchTheFit.com" data-link="https://devpost.com/software/matchmyfit-com">
-                <img src="img/prizes/gupshup.jpg" alt="ChemBot" data-link="https://devpost.com/software/chembot">
-                <img src="img/prizes/best-android.jpg" alt="Activists Assemble" data-link="https://devpost.com/software/activists-assemble">
-                <img src="img/prizes/best-beginner.jpg" alt="Studium" data-link="https://devpost.com/software/studium">
-                <img src="img/prizes/best-vi.jpg" alt="Auxilium Health" data-link="https://devpost.com/software/auxilium-1et0ri">
-            </div>
-        </div>
-    </section>
-
-    <section id="supporters">
-        <div class="container">
-            <h2>A huge thanks to our supporters!</h2>
-
-            <div class="flex-container">
-                <a href="https://hacker.fund">
-                    <img src="img/supporters/hackerfund.png" alt="Hacker Fund" class="img-responsive supporter-image partner">
-                </a>
-                <a href="https://www.adobe.com">
-                    <img src="img/supporters/adobe.png" alt="Abobe" class="img-responsive supporter-image sponsor">
-                </a>
-                <a href="https://www.makeschool.com">
-                    <img src="img/supporters/makeschool.png" alt="Make School" class="img-responsive supporter-image sponsor">
-                </a>
-                <a href="https://redislabs.com">
-                    <img src="img/supporters/redis.png" alt="Redis Labs" class="img-responsive supporter-image sponsor">
-                </a>
-                <a href="http://losaltoscf.org">
-                    <img src="img/supporters/lacf.jpg" alt="Los Altos Community Foundation" class="img-responsive supporter-image sponsor">
-                </a>
-                <a href="https://www.gupshup.io">
-                    <img src="img/supporters/gupshup.jpg" alt="GupShup" class="img-responsive supporter-image sponsor">
-                </a>
-                <a href="https://squareup.com">
-                    <img src="img/supporters/square.jpg" alt="Square" class="img-responsive supporter-image sponsor">
-                </a>
-                <a href="https://digitalocean.com">
-                    <img src="img/supporters/digitalocean.jpg" alt="Digital Ocean" class="img-responsive supporter-image sponsor">
-                </a>
-                <a href="https://ibm.com">
-                    <img src="img/supporters/ibm.jpg" alt="IBM" class="img-responsive supporter-image sponsor">
-                </a>
-                <a href="https://www.ea.com">
-                    <img src="img/supporters/ea.png" alt="EA" class="img-responsive supporter-image donor">
-                </a>
-                <a href="https://www.codeforfun.com">
-                    <img src="img/supporters/codeforfun.png" alt="Code for Fun" class="img-responsive supporter-image sponsor">
-                </a>
-                <a href="https://evernote.com">
-                    <img src="img/supporters/evernote.png" alt="Evernote" class="img-responsive supporter-image sponsor">
-                </a>
-                <a href="https://www.interviewcake.com">
-                    <img src="img/supporters/interviewcake.jpg" alt="Interview Cake" class="img-responsive supporter-image sponsor">
-                </a>
-                <a href="https://namecheap.com">
-                    <img src="img/supporters/namecheap.png" alt="Namecheap" class="img-responsive supporter-image donor">
-                </a>
-                <a href="https://lob.com">
-                    <img src="img/supporters/lob.png" alt="Lob" class="img-responsive supporter-image donor">
-                </a>
-                <a href="https://www.wolfram.com/language">
-                    <img src="img/supporters/wolfram.png" alt="Wolfram Language" class="img-responsive supporter-image donor">
-                </a>
-                <a href="https://www.stickermule.com">
-                    <img src="img/supporters/stickermule.png" alt="Stickermule" class="img-responsive supporter-image donor">
-                </a>
-                <a href="https://kloudless.com">
-                    <img src="img/supporters/kloudless.png" alt="Kloudless" class="img-responsive supporter-image donor">
-                </a>
-                <a href="https://ultrapress.com">
-                    <img src="img/supporters/ultrapress.png" alt="Ultrapress" class="img-responsive supporter-image donor">
-                </a>
-                <a href="http://www.wikihow.com">
-                    <img src="img/supporters/wikihow.png" alt="Wikihow" class="img-responsive supporter-image donor">
-                </a>
-                <a href="https://leangap.org">
-                    <img src="img/supporters/leangap.jpg" alt="Leangap" class="img-responsive supporter-image donor">
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <footer>
-        <a class="left" href="/2016">Visit 2016</a>
-        <a class="left" href="/2017">Visit 2017</a>
-
-        <div class="right">
-            <a class="social-media">Find us on:</a>
-            <a href="https://www.facebook.com/losaltoshacks"><i class="fa fa-facebook-official" aria-hidden="true"></i></a>
-            <a href="https://twitter.com/losaltoshacks"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-            <a href="https://www.instagram.com/losaltoshacks"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-        </div>
-    </footer>
-
-</body>
-
+					<p>Interested in sponsoring? Contact us at <a href="mailto:sponsor@losaltoshacks.com">sponsor@losaltoshacks.com</a></p>
+				</div>
+			</section>
+			<section id="team">
+				<div class="row">
+					<div>
+						<h2>Our Team</h2>
+						<div class="team-wrapper row medium-columns">
+							<div>
+								<img src="https://lorempixel.com/180/180/cats?1">
+								<h3>Jamsheed Mistri</h3>
+								<p>Sponsorship Director</p>
+							</div>
+							<div>
+								<img src="https://lorempixel.com/180/180/cats?2">
+								<h3>Justin Yu</h3>
+								<p>Tech Director</p>
+							</div>
+							<div>
+								<img src="https://lorempixel.com/180/180/cats?3">
+								<h3>An Huynh</h3>
+								<p>Outreach Director</p>
+							</div>
+							<div>
+								<img src="https://lorempixel.com/180/180/cats?4">
+								<h3>...</h3>
+								<p>...</p>
+							</div>
+							<div>
+								<img src="https://lorempixel.com/180/180/cats?5">
+								<h3>...</h3>
+								<p>...</p>
+							</div>
+							<div>
+								<img src="https://lorempixel.com/180/180/cats?6">
+								<h3>...</h3>
+								<p>...</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section id="schedule">
+				<div class="row">
+					<div>
+						<h2>Schedule</h2>
+						<p>Coming soon!</p>
+					</div>
+				</div>
+			</section>
+			<section id="legacy">
+				<div class="row">
+					<div>
+						<h2>Past Hackathons/Winners</h2>
+					</div>
+				</div>
+			</section>
+		</main>
+		<footer>Copyright © 2017 Los Altos Hacks. All rights reserved.</footer>
+		<script src="js/main.js"></script>
+		<script src="js/teaser-animation.js"></script>
+	</body>
 </html>
