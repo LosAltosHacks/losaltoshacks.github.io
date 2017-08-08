@@ -37,10 +37,10 @@ function animate(time) {
 	ctx.clearRect(0, 0, 700, 500);
 	t = easeInOutCubic(t);
 
-	
+
 	ctx.save()
 		ctx.translate(t * 0.35, 0);
-		
+
 		// Layer 0
 		ctx.fillStyle = "#2980b9";
 		drawLHoriz(t.map(0, 0.5).constrain());

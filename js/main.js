@@ -37,7 +37,7 @@ function throttle(func, time = 200){
 	}
 	resize()
 	window.addEventListener('resize', throttle(resize))
-	
+
 	const context = canvas.getContext('2d')
 
 	function bindMethods(object) {
@@ -65,7 +65,7 @@ function throttle(func, time = 200){
 	})
 
 	let isInteractive = true
-	
+
 	const draw = () => {
 		resetTransform()
 		save()
@@ -111,7 +111,7 @@ function throttle(func, time = 200){
 		isInteractive = window.innerWidth >= 800
 		if(isInteractive){
 			draw()
-			timeout = setTimeout(() => requestAnimationFrame(loop), 50)
+			timeout = setTimeout(() => requestAnimationFrame(loop), 150)
 		}else{
 			for(let i = 0; i < 400; i++){
 				draw()
