@@ -138,6 +138,12 @@ section:nth-child(even) {
 		text-align: left;
 	}
 }
+.gradient-text {
+	background: -webkit-linear-gradient(40deg, #106eb8, #a0d2f0);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	text-shadow: rgba(82, 190, 230, 0.5) 1px 1px 0.1em
+}
 
 #teaser-animation {
 	/* mix-blend-mode: multiply; */
