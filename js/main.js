@@ -37,7 +37,7 @@ function throttle(func, time = 200){
 	}
 	resize()
 	window.addEventListener('resize', throttle(resize))
-
+	
 	const context = canvas.getContext('2d')
 
 	function bindMethods(object) {
@@ -65,7 +65,7 @@ function throttle(func, time = 200){
 	})
 
 	let isInteractive = true
-
+	
 	const draw = () => {
 		resetTransform()
 		save()
@@ -103,15 +103,22 @@ function throttle(func, time = 200){
 		restore()
 
 		//$globalCompositeOperation('multiply')
-		$fillStyle('rgba(255, 255, 255, 0.002)')
+		if(navigator.userAgent.includes('Safari')){
+			$fillStyle('rgba(255, 255, 255, 0.01)')
+		}else{
+			$fillStyle('rgba(255, 255, 255, 0.002)')
+		}
 		fillRect(20, 20, width - 40, height - 40)
 	}
 
+	let animationID
 	const loop = () => {
 		isInteractive = window.innerWidth >= 800
 		if(isInteractive){
 			draw()
-			timeout = setTimeout(() => requestAnimationFrame(loop), 150)
+			timeout = setTimeout(() => {
+				animationID = requestAnimationFrame(loop)
+			}, 50)
 		}else{
 			for(let i = 0; i < 400; i++){
 				draw()
@@ -120,6 +127,7 @@ function throttle(func, time = 200){
 	}
 	loop()
 	window.addEventListener('resize', throttle(() => {
+		cancelAnimationFrame(animationID)
 		loop()
 	}), {
 		passive: true
