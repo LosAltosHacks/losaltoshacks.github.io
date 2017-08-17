@@ -288,3 +288,21 @@ input:focus {
 	max-width: 800px;
 	width: 90%;
 }
+
+
+
+
+
+::selection {
+	background: #2980b9;
+	background: transparent;
+	text-shadow: #3498db 0 0 19px;
+	color: black;
+	-webkit-text-fill-color: #02a2dd;
+}
+::-moz-selection {
+	background: #2980b9;
+	background: transparent;
+	text-shadow: #3498db 0 0 19px;
+	color: black;
+}
