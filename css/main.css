@@ -129,7 +129,9 @@ section:nth-child(even) {
 #top {
 	background: radial-gradient(white, #67b7e1);
 	padding-top: 3rem;
+	padding-bottom: 3rem;
 	text-align: center;
+	position: relative;
 }
 @media (min-width: 717px) {
 	#top {
