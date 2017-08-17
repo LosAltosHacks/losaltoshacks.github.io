@@ -139,11 +139,22 @@ section:nth-child(even) {
 	}
 }
 
-/*#teaser-animation {
-	mix-blend-mode: multiply;
-}*/
+#teaser-animation {
+	/* mix-blend-mode: multiply; */
+	transition: 0.3s;
+}
 #teaser-animation:not(:hover) {
 	z-index: 1;
+}
+#teaser-animation:hover {
+	filter: saturate(1.1) drop-shadow(currentColor 1px 1px 10px);
+	color: rgb(204, 236, 247);
+	transform: scale(1.001);
+	animation: Pop 0.3s;
+}
+@keyframes Pop {
+	from, to { transform: none }
+	20% { transform: scale(1.1) }
 }
 
 #top-canvas {
