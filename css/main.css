@@ -297,12 +297,12 @@ input:focus {
 	background: #2980b9;
 	background: transparent;
 	text-shadow: #3498db 0 0 19px;
-	color: black;
+	color: #02a2dd;
 	-webkit-text-fill-color: #02a2dd;
 }
 ::-moz-selection {
 	background: #2980b9;
 	background: transparent;
 	text-shadow: #3498db 0 0 19px;
-	color: black;
+	color: #02a2dd;
 }
