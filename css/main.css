@@ -43,7 +43,6 @@ img, canvas {
 }
 
 h1 {
-	font-family: "DIN";
 	font-size: 3rem;
 	text-transform: uppercase;
 }
@@ -54,10 +53,10 @@ nav, nav ul, nav ul li {
 nav {
 	background-image: linear-gradient(
 		to right,
-		transparent,
+		rgba(255, 255, 255, 0),
 		var(--nav-background-color) var(--side-padding),
 		var(--nav-background-color) calc(100vw - var(--side-padding)),
-		transparent
+		rgba(255, 255, 255, 0)
 	);
 	box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.1);
 
@@ -196,14 +195,15 @@ section:nth-child(even) {
 	border-radius: 50%;
 }
 
+
+
+
 #email-signup {
 	padding: 3rem;
 	width: 100%;
 	max-width: 700px;
 	margin: 4rem auto 0 auto;
 
-	-webkit-box-shadow: 0px 5px 14px 0px rgba(69,69,69,0.25);
-	-moz-box-shadow: 0px 5px 14px 0px rgba(69,69,69,0.25);
 	box-shadow: 0px 5px 14px 0px rgba(69,69,69,0.25);
 
 	background-color: white;
@@ -246,7 +246,7 @@ section:nth-child(even) {
 }
 
 input:focus {
-    outline: none;
+	outline: none;
 }
 
 #sponsor-shoutout {
