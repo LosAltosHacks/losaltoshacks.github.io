@@ -103,7 +103,7 @@ function throttle(func, time = 200){
 		restore()
 
 		//$globalCompositeOperation('multiply')
-		if(navigator.vendor && navigator.vendor.indexOf('Apple') > -1 && navigator.userAgent && !navigator.userAgent.match('CriOS');){
+		if(navigator.vendor && navigator.vendor.indexOf('Apple') > -1 && navigator.userAgent && !navigator.userAgent.match('CriOS')){
 			$fillStyle('rgba(255, 255, 255, 0.01)')
 		}else{
 			$fillStyle('rgba(255, 255, 255, 0.002)')
