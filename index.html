@@ -1,33 +1,46 @@
 <!DOCTYPE HTML>
 <html>
-	<head>
-		<title>Los Altos Hacks III - High School Hackathon</title>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
 
-		<link href="css/fonts.css" rel="stylesheet">
-		<link href="css/main.css" rel="stylesheet">
+<head>
+	<title>Los Altos Hacks III - High School Hackathon</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-		<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700" rel="stylesheet">
+	<link href="css/fonts.css" rel="stylesheet">
+	<link href="css/main.css" rel="stylesheet">
 
-		<script id="mcjs">!function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/48c677497c434b91bc928d44c/0a7ff0db52e30aa7726609f1a.js");</script>
-		<script>
-			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-			})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700" rel="stylesheet">
 
-			ga('create', 'UA-104988083-1', 'auto');
-			ga('send', 'pageview');
-		</script>
-	</head>
-	<body>
-		<main>
-			<section id="top">
-				<div class="row">
-					<div>
-						<!--<img id="teaser-animation" src="images/LA-III.gif">-->
-						<canvas id="teaser-animation">
+	<script id="mcjs">
+		! function(c, h, i, m, p) {
+			m = c.createElement(h), p = c.getElementsByTagName(h)[0], m.async = 1, m.src = i, p.parentNode.insertBefore(m, p)
+		}(document, "script", "https://chimpstatic.com/mcjs-connected/js/users/48c677497c434b91bc928d44c/0a7ff0db52e30aa7726609f1a.js");
+	</script>
+	<script>
+		(function(i, s, o, g, r, a, m) {
+			i['GoogleAnalyticsObject'] = r;
+			i[r] = i[r] || function() {
+				(i[r].q = i[r].q || []).push(arguments)
+			}, i[r].l = 1 * new Date();
+			a = s.createElement(o),
+				m = s.getElementsByTagName(o)[0];
+			a.async = 1;
+			a.src = g;
+			m.parentNode.insertBefore(a, m)
+		})(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+		ga('create', 'UA-104988083-1', 'auto');
+		ga('send', 'pageview');
+	</script>
+</head>
+
+<body>
+	<main>
+		<section id="top">
+			<div class="row">
+				<div>
+					<!--<img id="teaser-animation" src="images/LA-III.gif">-->
+					<canvas id="teaser-animation">
 					</div>
 					<div>
 						<h1 class="gradient-text">Los Altos<br/>Hacks III</h1>
@@ -37,49 +50,76 @@
 					</div>
 				</div>
 				<canvas id="top-canvas"></canvas>
-			</section>
-			<section id="about">
-				<div class="row">
-					<div class="container">
-						<h2>Los Altos's third annual high school hackathon</h2>
-						<p>We bring together hundreds of high school students from across the Bay Area to work together and make their ideas into reality.</p>
-						<p>We'll provide the food, refreshments and hacking spaces for you, the hackers, to do your magic. Just bring your ideas and your passion!</p>
+		</section>
+		<section id="about">
+			<div class="row">
+				<div class="container">
+					<h2>Los Altos's third annual high school hackathon</h2>
+					<p>We bring together hundreds of high school students from across the Bay Area to work together and make their ideas into reality.</p>
+					<p>We'll provide the food, refreshments and hacking spaces for you, the hackers, to do your magic. Just bring your ideas and your passion!</p>
 
-						<div id="email-signup">
+					<div id="email-signup">
 						<form action="//losaltoshacks.us16.list-manage.com/subscribe/post?u=48c677497c434b91bc928d44c&amp;id=02f44c6658" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
 							<div>
-							<label id="email-signup-label">Sign up to receive updates:</label>
-							<input type="email" value="" name="EMAIL" id="email-input" placeholder="Your email address" required>
-							<!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-							<div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_48c677497c434b91bc928d44c_02f44c6658" tabindex="-1" value=""></div>
-							<div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="subscribe-input" class="button"></div>
+								<label id="email-signup-label">Sign up to receive updates:</label>
+								<input type="email" value="" name="EMAIL" id="email-input" placeholder="Your email address" required>
+								<!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+								<div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_48c677497c434b91bc928d44c_02f44c6658" tabindex="-1" value=""></div>
+								<div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="subscribe-input" class="button"></div>
 							</div>
 						</form>
+					</div>
+
+					<div id="sponsor-shoutout">
+						<h3 class="sponsor-info">Interested in sponsoring Los Altos Hacks?</h3>
+						<p class="sponsor-info">Check out our <a class="sponsorship-email" href="docs/sponsorship.pdf">sponsorship prospectus</a>, and please let us know at <a class="sponsorship-email" href="mailto:sponsor@losaltoshacks.com" target="_top">sponsor@losaltoshacks.com</a>!</p>
+					</div>
+					<hr/>
+
+					<!-- Partner Images -->
+					<h2 class="sponsor-info">Partners</h3>
+					<div id="partner-logos" class="sponsor-row">
+						<div>
+							<a class ="sponsor-img"><img src="images/mlh-logo.png" alt ="mlh"></a>
 						</div>
-
-						<div id="sponsor-shoutout">
-							<h3 class="sponsor-info">Interested in sponsoring Los Altos Hacks?</h3>
-							<p class="sponsor-info">Check out our <a class="sponsorship-email" href="docs/sponsorship.pdf">sponsorship prospectus</a>, and please let us know at <a class="sponsorship-email" href="mailto:sponsor@losaltoshacks.com" target="_top">sponsor@losaltoshacks.com</a>!</p>
+						<div>
+							<a class ="sponsor-img"><img src="images/hack+logo.png" alt = "hack+"></a>
 						</div>
+					</div>
 
-						<hr/>
+					<!-- Sponsor Images -->
+					<h2 class="sponsor-info">Sponsors</h3>
+					<div id="sponsor-logos" class="sponsor-row">
+						<div>
+							<a class ="sponsor-img"><img src="images/Udacity-logo.png" alt="Udacity"></a>
+						</div>
+						<div>
+							<a class ="sponsor-img"><img src="images/Udacity-logo.png" alt="Udacity"></a>
+						</div>
+						<div>
+							<a class ="sponsor-img"><img src="images/Udacity-logo.png" alt="Udacity"></a>
+						</div>
+					</div>
+					<hr/>
 
-						<h2 id="previous-years-header">Visit past years</h2>
-						<div id="previous-years" class="row">
-							<div>
-								<a class="website-img" href="/2016"><img src="images/2016.png" alt="2016"></a>
-							</div>
-							<div>
-								<a class="website-img" href="/2017"><img src="images/2017.png" alt="2017"></a>
-							</div>
+					<!-- Previous Year Sites -->
+					<h2 id="previous-years-header">Visit past years</h2>
+					<div id="previous-years" class="row">
+						<div>
+							<a class="website-img" href="/2016"><img src="images/2016.png" alt="2016"></a>
+						</div>
+						<div>
+							<a class="website-img" href="/2017"><img src="images/2017.png" alt="2017"></a>
 						</div>
 					</div>
 				</div>
+			</div>
 
-			</section>
-		</main>
-		<footer>Copyright © 2017 Los Altos Hacks. All rights reserved.</footer>
-		<script src="js/main.js"></script>
-		<script src="js/teaser-animation.js"></script>
-	</body>
+		</section>
+	</main>
+	<footer>Copyright © 2017 Los Altos Hacks. All rights reserved.</footer>
+	<script src="js/main.js"></script>
+	<script src="js/teaser-animation.js"></script>
+</body>
+
 </html>

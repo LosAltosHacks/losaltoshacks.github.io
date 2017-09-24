@@ -27,7 +27,7 @@ a {
 	text-decoration: none;
 	transition: 0.3s;
 }
-a:hover {
+.website-img:hover {
 	opacity: 0.8;
 	box-shadow: inset 0 -4px;
 }
@@ -109,11 +109,12 @@ section:nth-child(even) {
 	flex-direction: row;
 	align-items: center;
 	max-width: var(--site-width);
+
 }
 .row > * {
 	flex: 1 320px;
 }
-.row.medium-columns > * {
+.row.medium-columns > * {`
 	flex: 1 250px;
 }
 .row.small-columns > * {
@@ -155,7 +156,7 @@ section:nth-child(even) {
 #teaser-animation:hover {
 	filter: saturate(1.1) drop-shadow(currentColor 1px 1px 10px);
 	color: rgb(204, 236, 247);
-	transform: scale(1.001);
+	transform: (1.001);
 	animation: Pop 0.3s;
 }
 @keyframes Pop {
@@ -273,6 +274,7 @@ input:focus {
 
 #sponsor-shoutout {
 	margin: 3.5rem;
+	margin-bottom:2rem;
 }
 
 .sponsorship-email {
@@ -291,6 +293,36 @@ input:focus {
 
 #previous-years-header {
 	text-align: center;
+}
+.sponsor-img img{
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+}
+.sponsor-row{
+  flex-wrap: wrap;
+	flex-direction: row;
+	align-items: center;
+	max-width: var(--site-width);
+
+
+}
+.sponsor-row > * {
+	flex: 1 216px;
+}
+.sponsor-row.medium-columns > * {`
+	flex: 1 115px;
+}
+.sponsor-row.small-columns > * {
+	flex: 1 100px;
+}
+.sponsor-row > * > * + * {
+	margin-top: 1rem;
+}
+
+.sponsor-img {
+	margin: 2rem;
+	margin-top:0.5rem;
 }
 
 .website-img {
@@ -311,6 +343,7 @@ hr {
 	background-color: #e3e7ed;
 	height: 2px;
 	margin: 3.5rem auto;
+	margin-bottom:2rem;
 }
 
 
