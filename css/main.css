@@ -306,7 +306,7 @@ input:focus {
   max-width: var(--site-width);
 }
 .sponsor-row > * {
-	flex: 1 216px;
+	flex: 1;
 }
 .sponsor-row.medium-columns > * {`
 	flex: 1 115px;
@@ -326,11 +326,6 @@ input:focus {
 .sponsor-img {
 	margin: 0.75rem;
 	margin-top: 0.5rem;
-}
-
-#lone {
-	width: 60%;
-	margin: 0 auto;
 }
 
 .website-img {
