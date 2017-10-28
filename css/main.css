@@ -180,13 +180,10 @@ hr {
 	padding: 1rem;
 }
 .row.columns.medium > * {
-	flex: 1 250px;
+	flex: 0 calc(240px + 7vw);
 }
 .row.columns.small > * {
 	flex: 1 1 calc(130px + 10vw);
-}
-.row.columns.half > * {
-	flex: 0 44%;
 }
 .row > * > * + * {
 	margin-top: 1rem;
@@ -304,7 +301,7 @@ hr {
 	max-height: calc(40px + 6vw);
 }
 #sponsors img {
-	max-height: 7vw;
+	max-height: calc(20px + 6vw);
 }
 
 #past-years img {
