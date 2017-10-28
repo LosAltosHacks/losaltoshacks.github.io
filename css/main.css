@@ -135,7 +135,7 @@ section {
 	padding: 2.5rem 2rem;
 	align-items: center;
 	background-color: rgba(255, 255, 255, 0.95);
-	isolation: isolate;
+	position: relative;
 }
 section:nth-child(even) {
 	background-color: rgba(250, 253, 255, 0.9);
@@ -146,7 +146,7 @@ footer {
 	padding: 2rem 2rem;
 	background-color: #22303d;
 	color: white;
-	isolation: isolate;
+	position: relative;
 }
 
 hr {
