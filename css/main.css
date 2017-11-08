@@ -276,8 +276,6 @@ hr {
 .faq-wrapper {
 	font-size: 0.75em;
 	line-height: 1.65;
-	/*margin-left: -1rem;
-	margin-right: -1rem;*/
 }
 .faq-wrapper > * {
 	padding: 1rem;
