@@ -261,7 +261,7 @@ hr {
 }
 
 
-#apply {
+/*#apply {
 	flex-direction: row;
 	align-items: center;
 
@@ -271,7 +271,7 @@ hr {
 	text-transform: uppercase;
 	width: -webkit-min-content;
 	width: min-content;
-}
+}*/
 #apply h2 {
 	margin-right: 1rem;
 }
@@ -285,6 +285,40 @@ hr {
 	color: #ff5069;
 }
 
+.apply-wrapper {
+	display: inline-block;
+	text-align: center;
+}
+.button-wrapper {
+	display: inline-block;
+	margin-top: 2rem;
+}
+.apply-button {
+	padding: 1rem 2rem;
+	display: inline-block;
+	float: left;
+	color: white;
+	margin: 0.4rem;
+}
+.apply-button.blue {
+	background-color: var(--blue);
+}
+.apply-button.darkblue {
+	background-color: var(--darkblue);
+}
+.apply-button.blue:hover {
+	background-color: var(--darkblue);
+}
+.apply-button.darkblue:hover {
+	background-color: var(--blue);
+}
+.parallelogram{
+  transform: skew(-20deg);
+}
+.skew-fix{
+  display:inline-block;
+  transform: skew(20deg);
+}
 
 .faq-wrapper {
 	font-size: 0.75em;
