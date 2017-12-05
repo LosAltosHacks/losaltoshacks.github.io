@@ -2,10 +2,10 @@ var canvas = document.getElementById("teaser-animation"),
 	ctx = canvas.getContext("2d"),
 	startTime = performance.now();
 
-canvas.height = 500;
-canvas.width = 700;
+canvas.width = 965;
+canvas.height = 600;
 
-ctx.scale(100, 100);
+ctx.scale(200, 200);
 
 Object.assign(Number.prototype, {
 	map(a, b, A = 0, B = 1){
@@ -57,22 +57,22 @@ function animate(time) {
 
 function drawLVert(t) {
 	polygon([
-		[1, 1],
-		[2, 1],
-		[2, 4],
-		[2 - 0.005, 4],
-		[1, 3 + 0.005],
+		[0, 0],
+		[1, 0],
+		[1, 3],
+		[1 - 0.005, 3],
+		[0, 2 + 0.005],
 	]);
 
 	// Half pixel offsets prevent "cracks" from showing between shapes
 	transitionedPolygon([
-		[1, 3 - 0.005],
-		[2 + 0.005, 4],
-		[1.5, 5 - 1.5],
+		[0, 2 - 0.005],
+		[1 + 0.005, 3],
+		[0.5, 4 - 1.5],
 	], [
-		[1, 3 - 0.005],
-		[2 + 0.005, 4],
-		[1, 5 - 1],
+		[0, 2 - 0.005],
+		[1 + 0.005, 3],
+		[0, 4 - 1],
 	], t);
 }
 
@@ -82,45 +82,45 @@ function drawLHoriz(t) {
 	// this piece to stick out when it is supposed to be fully retracted. So,
 	// we need to ease the half pixel too.
 	transitionedPolygon([
-		[2, 3],
-		[3 + 1/6 + 0.005, 3],
-		[3 - 1/6 + 0.005, 4],
-		[2, 4],
+		[1, 2],
+		[2 + 1/6 + 0.005, 2],
+		[2 - 1/6 + 0.005, 3],
+		[1, 3],
 	], [
-		[2, 3],
-		[2, 3],
-		[2, 4],
-		[2, 4],
+		[1, 2],
+		[1, 2],
+		[1, 3],
+		[1, 3],
 	], t)
 }
 
 function drawALeft(t) {
 	transitionedPolygon([
-		[3 - 1/6, 4],
-		[4 - 1/6, 4],
-		[5 - 1/6, 1],
-		[4 - 1/6, 1],
+		[2 - 1/6, 3],
+		[3 - 1/6, 3],
+		[4 - 1/6, 0],
+		[3 - 1/6, 0],
 	], [
 		// Skew (+/- 0.5); slide to the right (+ 2/3)
-		[3 - 1/6 + 0.5 + 2/3, 4],
-		[4 - 1/6 + 0.5 + 2/3, 4],
-		[5 - 1/6 - 0.5 + 2/3, 1],
-		[4 - 1/6 - 0.5 + 2/3, 1],
+		[2 - 1/6 + 0.5 + 2/3, 3],
+		[3 - 1/6 + 0.5 + 2/3, 3],
+		[4 - 1/6 - 0.5 + 2/3, 0],
+		[3 - 1/6 - 0.5 + 2/3, 0],
 	], t)
 }
 
 function drawARight(t) {
 	transitionedPolygon([
-		[5 - 1/6, 1],
-		[4 - 1/6, 1],
-		[5 - 1/6, 4],
-		[6 - 1/6, 4],
+		[4 - 1/6, 0],
+		[3 - 1/6, 0],
+		[4 - 1/6, 3],
+		[5 - 1/6, 3],
 	], [
 		// Skew (+/- 0.5); slide to the left (- 11/6)
-		[5 - 1/6 + 0.5 - 11/6, 1],
-		[4 - 1/6 + 0.5 - 11/6, 1],
-		[5 - 1/6 - 0.5 - 11/6, 4],
-		[6 - 1/6 - 0.5 - 11/6, 4],
+		[4 - 1/6 + 0.5 - 11/6, 0],
+		[3 - 1/6 + 0.5 - 11/6, 0],
+		[4 - 1/6 - 0.5 - 11/6, 3],
+		[5 - 1/6 - 0.5 - 11/6, 3],
 	], t)
 }
 

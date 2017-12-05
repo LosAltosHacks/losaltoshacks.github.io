@@ -39,37 +39,21 @@
 	<main>
 		<!-- Top -->
 		<section id="top">
-			<div class="row">
-				<canvas id="top-canvas"></canvas>
-				<div>
-					<!--<img id="teaser-animation" src="images/LA-III.gif">-->
-					<canvas id="teaser-animation">
+			<canvas id="top-canvas"></canvas>
+			<div id="teaser-animation-wrapper">
+				<canvas id="teaser-animation"></canvas>
+			</div>
+			<div id="top-text">
+				<h1 class="gradient-text">Los Altos<br/>Hacks III</h1>
+				<div class="gradient-text">
+					<p><date>March 24 - 25, 2018</date></p>
+					<p class="gradient-text">Juniper Aspiration Dome</p>
 				</div>
-				<div id="top-text">
-					<h1 class="gradient-text">Los Altos<br/>Hacks III</h1>
-					<p class="gradient-text">
-						<date>March 24-25, 2018</date>
-					</p>
-					<p class="gradient-text">
-						Juniper Aspiration Dome
-					</p>
-				</div>
-				</div>
-		</section>
-
-		<section id="apply">
-			<div class="apply-wrapper">
-				<h1 class="gradient-text">APPLY NOW!</h1>
-
-				<div class="button-wrapper">
-					<a class="parallelogram apply-button blue" href="#">
-						<span class="skew-fix">HACKER</span>
-					</a>
-					<a class="parallelogram apply-button darkblue" href="#">
-						<span class="skew-fix">MENTOR</span>
-					</a>
-				</div>
-
+			</div>
+			<div class="row" id="apply">
+				<h2 class="gradient-text">Apply Now:</h2>
+				<a class="button blue" href="#hacker-apply"><span>HACKER</span></a>
+				<a class="button darkblue" href="#mentor-apply"><span>MENTOR</span></a>
 			</div>
 		</section>
 
@@ -96,7 +80,7 @@
 			<div class="row">
 				<div>
 					<h2>FAQ</h2>
-					<div class="faq-wrapper row">
+					<div class="faq-wrapper row columns-half">
 						<div>
 							<h3>What is Los Altos Hacks?</h3>
 							<p>Los Altos Hacks is a high school hackathon – overnight programming event where high school students work together in teams of four to create a project. At Los Altos Hacks, students will have 24 hours to form their idea into a reality. This year, we're aiming to have around 350 attendees with a target on minority groups.</p>
@@ -146,7 +130,7 @@
 				<div>
 					<h2>Partners</h2>
 					<!-- Partner Images -->
-					<div class="row columns medium">
+					<div class="row columns-medium">
 						<a target="_blank" href="https://mlh.io/"><img src="images/sponsors/mlh.png" alt="Major League Hacking" title="Major League Hacking"></a>
 						<a target="_blank" href="https://hackplus.io/"><img src="images/sponsors/hack+.png" alt="Hack+" title="Hack+"></a>
 					</div>
@@ -159,19 +143,19 @@
 			<div class="row">
 				<div>
 					<h2>Our Sponsors</h2>
-					<div class="row columns medium">
+					<div class="row columns-medium">
 						<a target="_blank" href="https://www.udacity.com/"><img src="images/sponsors/udacity.png" alt="Udacity" title="Udacity"></a>
 					</div>
-					<div class="row columns medium">
+					<div class="row columns-medium">
 						<a target="_blank" href="http://losaltoscf.org/"><img src="images/sponsors/lacf.png" alt="Los Altos Community Foundation" title="Los Altos Community Foundation"></a>
 					</div>
-					<div class="row columns medium">
+					<div class="row columns-medium">
 						<a target="_blank" href="hhttps://www.yubico.com/"><img src="images/sponsors/yubico.png" alt="Yubico" title="Yubico"></a>
 						<a target="_blank" href="https://www.citrix.com/"><img src="images/sponsors/citrix.png" alt="Citrix" title="Citrix"></a>
 						<a target="_blank" href="http://www.belkin.com/us/"><img src="images/sponsors/belkin.png" alt="Belkin" title="Belkin"></a>
 						<a target="_blank" href="https://balsamiq.com"><img src="images/sponsors/balsamiq.png" alt="Balsamiq" title="Balsamiq"></a>
 					</div>
-					<div class="row columns small">
+					<div class="row columns-small">
 						<a target="_blank" href="http://www.brandmakers.com/"><img src="images/sponsors/brandmakers.png" alt="Brand Makers" title="Brand Makers"></a>
 						<a target="_blank" href="https://www.stickermule.com/"><img src="images/sponsors/stickermule.png" alt="Sticker Mule" title="Sticker Mule"></a>
 						<a target="_blank" href="http://get.tech/"><img src="images/sponsors/tech.png" alt=".TECH" title=".TECH"></a>
@@ -201,7 +185,7 @@
 			<div class="row">
 				<div>
 					<h2>Past Years</h2>
-					<div class="row columns small">
+					<div class="row columns-small">
 						<a href="/2016"><img src="images/2016.png" alt="2016"></a>
 						<a href="/2017"><img src="images/2017.png" alt="2017"></a>
 					</div>
