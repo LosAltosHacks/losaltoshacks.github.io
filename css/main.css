@@ -311,15 +311,54 @@ hr {
 	display: inline-block;
 	transform: skew(15deg);
 }
+.address {
+	font-size: 0.7em;
+}
 
 .faq-wrapper {
 	font-size: 0.75em;
 	line-height: 1.65;
+	align-items: start;
 }
 .faq-wrapper > * {
-	padding: 1rem;
+	padding: 0 1rem !important;
 }
 
+button.accordion {
+    background-color: white;
+    cursor: pointer;
+    padding: 0.8rem 0;
+    width: 100%;
+    text-align: left;
+	font-size: 1.2em;
+	font-family: 'DIN', 'Open Sans', sans-serif;
+	font-weight: lighter;
+    border: none;
+	border-bottom: 0px;
+    outline: none;
+}
+button.accordion.active {
+	border-bottom: 3px solid var(--darkblue);
+}
+div.panel {
+    padding: 0.8rem 0;
+    background-color: white;
+    display: none;
+	margin: 0;
+	text-align: left;
+}
+
+.down-arrow {
+	border: solid black;
+    border-width: 0 1.5px 1.5px 0;
+    display: inline-block;
+    padding: 6px;
+	margin-top: 5px;
+	margin-right: 5px;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+	float: right;
+}
 
 .team-wrapper > * {
 	padding: 1rem;
