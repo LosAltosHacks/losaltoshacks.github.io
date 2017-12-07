@@ -354,7 +354,7 @@ details[open] > summary:after {
     transform: translateY(-0.3536em) rotate(45deg);
 }
 details > summary + * {
-	animation: DetailsOpen 0.5s linear;
+	animation: DetailsOpen 0.75s linear;
 }
 details[open] > summary + * {
 	margin-top: 0.5em;
