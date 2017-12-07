@@ -319,45 +319,51 @@ hr {
 	font-size: 0.75em;
 	line-height: 1.65;
 	align-items: start;
-}
-.faq-wrapper > * {
-	padding: 0 1rem !important;
-}
-
-button.accordion {
-    background-color: white;
-    cursor: pointer;
-    padding: 0.8rem 0;
-    width: 100%;
-    text-align: left;
-	font-size: 1.2em;
-	font-family: 'DIN', 'Open Sans', sans-serif;
-	font-weight: lighter;
-    border: none;
-	border-bottom: 0px;
-    outline: none;
-}
-button.accordion.active {
-	border-bottom: 3px solid var(--darkblue);
-}
-div.panel {
-    padding: 0.8rem 0;
-    background-color: white;
-    display: none;
-	margin: 0;
 	text-align: left;
 }
+.faq-wrapper > * {
+	padding: 0 0.5rem;
+}
 
-.down-arrow {
-	border: solid black;
-    border-width: 0 1.5px 1.5px 0;
-    display: inline-block;
-    padding: 6px;
-	margin-top: 5px;
-	margin-right: 5px;
-    transform: rotate(45deg);
-    -webkit-transform: rotate(45deg);
-	float: right;
+summary {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	outline: none;
+	cursor: pointer;
+	transition: 0.3s;
+}
+summary:hover {
+	color: var(--blue);
+}
+summary::-webkit-details-marker {
+	display: none;
+}
+summary:after {
+	content: '';
+	display: block;
+	border: solid;
+    border-width: 0 0.2em 0.2em 0;
+    font-size: 0.66em;
+    width: 1em;
+    height: 1em;
+    transform: translateX(-0.3536em) rotate(-45deg);
+    transition: transform 0.3s;
+}
+details[open] > summary:after {
+    transform: translateY(-0.3536em) rotate(45deg);
+}
+details > summary + * {
+	animation: DetailsOpen 0.5s linear;
+}
+details[open] > summary + * {
+	margin-top: 0.5em;
+	max-height: 100vh;
+	animation-direction: reverse;
+}
+@keyframes DetailsOpen {
+	from { overflow: hidden; max-height: 100vh }
+	to { overflow: hidden; max-height: 0 }
 }
 
 .team-wrapper > * {
