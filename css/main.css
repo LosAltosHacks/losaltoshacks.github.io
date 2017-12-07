@@ -266,17 +266,6 @@ hr {
 	grid-area: apply;
 }
 
-#top-canvas::before {
-	content: ' ';
-	position: fixed;
-	width: 100%;
-	height: 100%;
-	left: 0;
-	top: 0;
-	z-index: -1;
-	will-change: transform;
-}
-
 #top-canvas {
 	position: absolute;
 	overflow: hidden;
