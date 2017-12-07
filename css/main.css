@@ -28,7 +28,7 @@ div, header, main, article, footer {
 	flex-direction: column;
 	justify-content: center;
 }
-p, h1, h2, h3, ul {
+p, h1, h2, h3, h4, ul {
 	margin: 0;
 }
 
@@ -185,11 +185,17 @@ hr {
 .row.columns-half > * {
 	flex: 1 320px;
 }
+.row.columns-half > * {
+	flex: 1 320px;
+}
 .row.columns-medium > * {
 	flex: 1 calc(240px + 7vw);
 }
 .row.columns-small > * {
 	flex: 1 1 calc(130px + 10vw);
+}
+.row.columns-tiny > * {
+	flex: 1 calc(90px + 8vw);
 }
 .row > :not(:only-child) {
 	padding: 1rem;
@@ -197,12 +203,6 @@ hr {
 .row > * > * + * {
 	margin-top: 1rem;
 }
-/*
-.about-paragraph {
-	display: block;
-	margin: 0 auto;
-	max-width: 600px;
-}*/
 
 #top {
 	display: grid;
@@ -250,7 +250,7 @@ hr {
 #teaser-animation:hover {
 	filter: saturate(1.1) drop-shadow(currentColor 1px 1px 10px);
 	color: rgb(204, 236, 247);
-	transform: (1.001);
+	transform: scale(1.001);
 	animation: Pop 0.3s;
 }
 @keyframes Pop {
@@ -357,11 +357,20 @@ details[open] > summary + * {
 	to { overflow: hidden; max-height: 0; opacity: 0 }
 }
 
-.team-wrapper > * {
-	padding: 1rem;
+
+.team-wrapper {
+	font-size: 0.9em;
+	align-items: start;
 }
-#team img {
+.team-wrapper figure {
+	margin: 0;
+}
+.team-wrapper img {
 	border-radius: 50%;
+}
+.team-wrapper figcaption {
+	font-size: 0.8em;
+	margin: 0;
 }
 
 
