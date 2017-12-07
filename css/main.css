@@ -209,8 +209,8 @@ hr {
 	grid-template-areas:
 		'logo details'
 		'apply apply';
-	grid-template-columns: 45% auto;
-	grid-gap: 2rem 0;
+	grid-template-columns: 40% auto;
+	grid-gap: 1rem;
 	text-align: left;
 	background: radial-gradient(white, #67b7e1);
 	padding-top: 3rem;
@@ -236,7 +236,8 @@ hr {
 
 #teaser-animation-wrapper {
 	grid-area: logo;
-	max-width: 60vw;
+	width: 60vw;
+	max-width: 100%;
 }
 #teaser-animation {
 	/* mix-blend-mode: multiply; */
