@@ -379,6 +379,12 @@ details[open] > summary + * {
 }
 
 
+#schedule table, #schedule h3 {
+	border-spacing: 0.5rem 1rem;
+	text-align: left;
+}
+
+
 .team-wrapper {
 	font-size: 0.9em;
 	align-items: start;
