@@ -228,6 +228,11 @@ hr {
 		text-align: center;
 	}
 }
+@media (max-width: 449px) {
+	.apply-now-text {
+		display: none;
+	}
+}
 
 #top-canvas {
 	position: absolute;
