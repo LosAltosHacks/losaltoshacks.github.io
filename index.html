@@ -39,36 +39,37 @@
 	<main>
 		<!-- Top -->
 		<section id="top">
-			<div class="row">
-				<canvas id="top-canvas"></canvas>
-				<div>
-					<!--<img id="teaser-animation" src="images/LA-III.gif">-->
-					<canvas id="teaser-animation"></canvas>
-				</div>
-				<div>
-					<h1 class="gradient-text">Los Altos<br/>Hacks III</h1>
-					<p class="gradient-text">
-						<date>Coming Early 2018</date>
-					</p>
-				</div>
-				</div>
+			<canvas id="top-canvas"></canvas>
+			<div id="teaser-animation-wrapper">
+				<canvas id="teaser-animation"></canvas>
+			</div>
+			<div id="top-text" class="gradient-text">
+				<h1>Los Altos<br/>Hacks III</h1>
+				<p class="date"><time>March 24 - 25, 2018</time></p>
+				<p class="venue">Juniper Aspiration Dome</p>
+				<p class="address">1081 Innovation Way, Sunnyvale, CA</p>
+			</div>
+			<div class="row" id="apply">
+				<h2 class="apply-now-text gradient-text">Apply Now!</h2>
+				<a class="typeform-share button blue" href="https://losaltoshacks.typeform.com/to/A5wAta" data-mode="popup" target="_blank"><span>HACKER</span></a>
+				<a class="typeform-share button darkblue" href="https://losaltoshacks.typeform.com/to/vAS4L4" data-mode="popup" target="_blank"><span>MENTOR</span></a>
+			</div>
 		</section>
 
 		<!-- About -->
 		<section id="about">
 			<div class="row">
 				<div>
-					<h2>Los Altos’s third annual high school hackathon</h2>
-					<p>We bring together hundreds of high school students from across the Bay Area to work together and make their ideas a reality.</p>
-					<p>We’ll provide the food, refreshments and hacking spaces for you — the hackers — to do your magic. Just bring your ideas and passion!</p>
+					<h2 class="gradient-text">Los Altos's third annual high school hackathon</h2>
+					<p>We bring together hundreds of high school students from across the Bay Area to work together and make their ideas into reality.</p>
+					<p>We'll provide the food, refreshments and hacking spaces for you, the hackers, to do your magic. Just bring your ideas and your passion!</p>
 
-					<form action="//losaltoshacks.us16.list-manage.com/subscribe/post?u=48c677497c434b91bc928d44c&amp;id=02f44c6658" method="post" id="email-signup" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate="">
-						<h3 id="email-signup-label">Sign up to receive updates</h3>
+					<!-- <form action="//losaltoshacks.us16.list-manage.com/subscribe/post?u=48c677497c434b91bc928d44c&amp;id=02f44c6658" method="post" id="email-signup" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate="">
+						<h4 id="email-signup-label">Sign up to receive updates:</h3>
 						<input type="email" value="" name="EMAIL" id="email-input" placeholder="Your email address" required="">
-						<!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
 						<div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_48c677497c434b91bc928d44c_02f44c6658" tabindex="-1" value=""></div>
 						<input type="submit" value="Subscribe" name="subscribe" id="subscribe-input">
-					</form>
+					</form> -->
 				</div>
 			</div>
 		</section>
@@ -78,49 +79,83 @@
 			<div class="row">
 				<div>
 					<h2>FAQ</h2>
-					<div class="faq-wrapper row">
-						<div>
-							<h3>What is Los Altos Hacks?</h3>
-							<p>Los Altos Hacks is a high school hackathon — a 24-hour programming event where students work in teams to make hardware and software projects. This year, we aim to have around 350 attendees with an even gender ratio.</p>
-						</div>
-						<div>
-							<h3>Who can participate?</h3>
-							<p>Any high school student can participate. If you’ve already graduated from high school, you can’t participate, but you can come mentor others!</p>
-						</div>
-						<div>
-							<h3>How do I form or join a team?</h3>
-							<p>There will be a session at the beginning of the hackathon for you to meet others and form teams. Each team may have a maximum of four people.</p>
-						</div>
-						<div>
-							<h3>Does this cost money?</h3>
-							<p>No! Los Altos Hacks is free for all participants — food, swag, and other costs are covered. We do not provide travel reimbursements, however.</p>
-						</div>
-						<div>
-							<h3>What if I can’t code?</h3>
-							<p>No problem! We accept people regardless of experience. Plus, we’ll have workshops where you can learn.</p>
-						</div>
-						<div>
-							<h3>What should I bring?</h3>
-							<p>Bring a valid student ID, a laptop, chargers, and the signed Parent Packet (you can also complete it online). Power strips, sleeping bags, and toiletries are highly recommended.</p>
-						</div>
-						<div>
-							<h3>I have another question...</h3>
-							<p>We’re here for you! Send us an email at <a href="mailto:info@losaltoshacks.com">info@losaltoshacks.com</a> or feel free to reach out to us on <a href="https://twitter.com/losaltoshacks" target="_blank">Twitter</a> or <a href="https://www.facebook.com/losaltoshacks/" target="_blank">Facebook</a>.</p>
-						</div>
+					<div class="faq-wrapper row columns-half">
+						<details>
+							<summary><h3>What is Los Altos Hacks?</h3></summary>
+							<div>
+								<p>Los Altos Hacks is a high school hackathon – overnight programming event where high school students work together in teams of four to create a project. At Los Altos Hacks, students will have 24 hours to form their idea into a reality. This year, we're aiming to have around 350 attendees with a target on minority groups.</p>
+							</div>
+						</details>
+						<details>
+							<summary><h3>Who can participate?</h3></summary>
+							<div>
+								<p>Any high school student can participate. If you have already graduated from high school, you cannot participate, however you can come help mentor others!</p>
+							</div>
+						</details>
+						<details>
+							<summary><h3>How do I form or join a team?</h3></summary>
+							<div>
+								<p>There will be a session at the beginning of the hackathon for you to meet others and form teams. Each team may have a maximum of four people.</p>
+							</div>
+						</details>
+						<details>
+							<summary><h3>Does this cost money?</h3></summary>
+							<div>
+								<p>No! Los Altos Hacks is free for all participants — all food, swag, and other costs are covered. We will not be providing travel reimbursements.</p>
+							</div>
+						</details>
+						<details>
+							<summary><h3>What if I can't code?</h3></summary>
+							<div>
+								<p>No problem! We are accepting people regardless of experience. Plus, we'll have workshops where you can learn.</p>
+							</div>
+						</details>
+						<details>
+							<summary><h3>What should I bring?</h3></summary>
+							<div>
+								<p>Bring a valid student ID, a laptop, chargers, and the signed Parent Packet (you can also complete it online). Power strips, sleeping bags, and toiletries highly recommended.</p>
+							</div>
+						</details>
+						<details>
+							<summary><h3>Is there a Code of Conduct?</h3></summary>
+							<div>
+								<p>Yes, there is! All attendees are required to review and abide by the <a href="http://static.mlh.io/docs/mlh-code-of-conduct.pdf" target="_blank">MLH Code of Conduct</a> during the event.</p>
+							</div>
+						</details>
+						<details>
+							<summary><h3>I have another question...</h3></summary>
+							<div>
+								<p>We're here for you! Send us an email at <a href="mailto:info@losaltoshacks.com">info@losaltoshacks.com</a> or feel tree to reach out to us on <a href="https://twitter.com/losaltoshacks" target="_blank">Twitter</a> or <a href="https://www.facebook.com/losaltoshacks/" target="_blank">Facebook</a>.</p>
+							</div>
+						</details>
 					</div>
 				</div>
 			</div>
 		</section>
 
-		<!-- Sponsor Shoutout -->
-		<section id="sponsor-shoutout">
+		<!-- Schedule -->
+		<!--<section id="schedule">
 			<div class="row">
 				<div>
-					<h3 class="sponsor-info">Interested in sponsoring Los Altos Hacks?</h3>
-					<p class="sponsor-info">Check out our <a href="docs/sponsorship.pdf">sponsorship prospectus</a>, and please let us know at <a href="mailto:sponsor@losaltoshacks.com" target="_top">sponsor@losaltoshacks.com</a>!</p>
+					<h2>Schedule</h2>
+					<table>
+						<caption><h3>Saturday</h3></caption>
+						<tr><th>Time</th><th>Event</th><th>Location</th></tr>
+						<tr><td>9:00 AM</td><td>Check In</td><td>Juniper Aspiration Dome</td></tr>
+						<tr><td></td><td></td><td></td></tr>
+						<tr><td></td><td></td><td></td></tr>
+						<tr><td></td><td></td><td></td></tr>
+					</table>
+					<table>
+						<caption><h3>Sunday</h3></caption>
+						<tr><th>Time</th><th>Event</th><th>Location</th></tr>
+						<tr><td></td><td></td><td></td></tr>
+						<tr><td></td><td></td><td></td></tr>
+						<tr><td></td><td></td><td></td></tr>
+					</table>
 				</div>
 			</div>
-		</section>
+		</section>-->
 
 		<!-- Partners -->
 		<section id="partners">
@@ -128,7 +163,10 @@
 				<div>
 					<h2>Partners</h2>
 					<!-- Partner Images -->
-					<div class="row columns medium">
+					<div class="row">
+						<a target="_blank" href="https://www.juniper.net/us/en/"><img src="images/sponsors/juniper.png" alt="Juniper Networks" title="Juniper Networks"></a>
+					</div>
+					<div class="row columns-medium">
 						<a target="_blank" href="https://mlh.io/"><img src="images/sponsors/mlh.png" alt="Major League Hacking" title="Major League Hacking"></a>
 						<a target="_blank" href="https://hackplus.io/"><img src="images/sponsors/hack+.png" alt="Hack+" title="Hack+"></a>
 					</div>
@@ -141,19 +179,19 @@
 			<div class="row">
 				<div>
 					<h2>Our Sponsors</h2>
-					<div class="row columns medium">
+					<div class="row columns-medium">
 						<a target="_blank" href="https://www.udacity.com/"><img src="images/sponsors/udacity.png" alt="Udacity" title="Udacity"></a>
 					</div>
-					<div class="row columns medium">
+					<div class="row columns-medium">
 						<a target="_blank" href="http://losaltoscf.org/"><img src="images/sponsors/lacf.png" alt="Los Altos Community Foundation" title="Los Altos Community Foundation"></a>
 					</div>
-					<div class="row columns medium">
+					<div class="row columns-medium">
 						<a target="_blank" href="hhttps://www.yubico.com/"><img src="images/sponsors/yubico.png" alt="Yubico" title="Yubico"></a>
 						<a target="_blank" href="https://www.citrix.com/"><img src="images/sponsors/citrix.png" alt="Citrix" title="Citrix"></a>
 						<a target="_blank" href="http://www.belkin.com/us/"><img src="images/sponsors/belkin.png" alt="Belkin" title="Belkin"></a>
 						<a target="_blank" href="https://balsamiq.com"><img src="images/sponsors/balsamiq.png" alt="Balsamiq" title="Balsamiq"></a>
 					</div>
-					<div class="row columns small">
+					<div class="row columns-small">
 						<a target="_blank" href="http://www.brandmakers.com/"><img src="images/sponsors/brandmakers.png" alt="Brand Makers" title="Brand Makers"></a>
 						<a target="_blank" href="https://www.stickermule.com/"><img src="images/sponsors/stickermule.png" alt="Sticker Mule" title="Sticker Mule"></a>
 						<a target="_blank" href="http://get.tech/"><img src="images/sponsors/tech.png" alt=".TECH" title=".TECH"></a>
@@ -178,12 +216,106 @@
 			</div>
 		</section>
 
+		<!-- Sponsor Shoutout -->
+		<section id="sponsor-shoutout">
+			<div class="row">
+				<div>
+					<h3 class="sponsor-info">Interested in sponsoring Los Altos Hacks?</h3>
+					<p class="sponsor-info">Check out our <a href="docs/sponsorship.pdf">sponsorship prospectus</a>, and please let us know at <a href="mailto:sponsor@losaltoshacks.com" target="_top">sponsor@losaltoshacks.com</a>!</p>
+				</div>
+			</div>
+		</section>
+
+		<!-- Team -->
+		<section id="team">
+			<div class="row">
+				<div>
+					<h2>Our Team</h2>
+					<div class="team-wrapper row columns-small">
+						<figure>
+							<img src="images/team/jamsheed.JPG">
+							<h4>Jamsheed Mistri</h4>
+							<figcaption>Lead &amp; Sponsorship Director</figcaption>
+						</figure>
+						<figure>
+							<img src="images/team/an.JPG">
+							<h4>An Huynh</h4>
+							<figcaption>Outreach Director</figcaption>
+						</figure>
+						<figure>
+							<img src="images/team/justin.JPG">
+							<h4>Justin Yu</h4>
+							<figcaption>Tech Director</figcaption>
+						</figure>
+					</div>
+					<div class="team-wrapper row columns-tiny">
+						<figure>
+							<img src="images/team/dan.JPG">
+							<h4>Dan Appel</h4>
+							<figcaption>Tech Team</figcaption>
+						</figure>
+						<figure>
+							<img src="images/team/krizia.JPG">
+							<h4>Krizia Araracap</h4>
+							<figcaption>Outreach &amp; Design Team</figcaption>
+						</figure>
+						<figure>
+							<img src="images/team/oscar.JPG">
+							<h4>Oscar Bjorkman</h4>
+							<figcaption>Tech &amp; Design Team</figcaption>
+						</figure>
+						<figure>
+							<img src="images/team/ryan.JPG">
+							<h4>Ryan Huang</h4>
+							<figcaption>Tech &amp; Design Team</figcaption>
+						</figure>
+						<figure>
+							<img src="images/team/leo.JPG">
+							<h4>Leo Lin</h4>
+							<figcaption>Sponsorship &amp; Outreach Team</figcaption>
+						</figure>
+						<figure>
+							<img src="images/team/kylemarino.JPG">
+							<h4>Kyle Marino</h4>
+							<figcaption>Sponsorship &amp; Tech Team</figcaption>
+						</figure>
+						<figure>
+							<img src="images/team/kat.JPG">
+							<h4>Katherine Nasif</h4>
+							<figcaption>Outreach Team</figcaption>
+						</figure>
+						<figure>
+							<img src="images/team/kylesandell.JPG">
+							<h4>Kyle Sandell</h4>
+							<figcaption>Tech Team</figcaption>
+						</figure>
+						<figure>
+							<img src="images/team/anya.JPG">
+							<h4>Anya Sharma</h4>
+							<figcaption>Sponsorship Team</figcaption>
+						</figure>
+						<figure>
+							<img src="images/team/sam.JPG">
+							<h4>Samuel Shi</h4>
+							<figcaption>Outreach Team</figcaption>
+						</figure>
+						<figure>
+							<img src="images/team/darryl.JPG">
+							<h4>Darryl Yeo</h4>
+							<figcaption>Tech &amp; Design Team</figcaption>
+						</figure>
+						<div><!-- 12 --></div>
+					</div>
+				</div>
+			</div>
+		</section>
+
 		<!-- Past Year Sites -->
 		<section id="past-years">
 			<div class="row">
 				<div>
 					<h2>Past Years</h2>
-					<div class="row columns small">
+					<div class="row columns-small">
 						<a href="/2016"><img src="images/2016.png" alt="2016"></a>
 						<a href="/2017"><img src="images/2017.png" alt="2017"></a>
 					</div>
@@ -191,9 +323,22 @@
 			</div>
 		</section>
 	</main>
-	<footer>Copyright © 2017 Los Altos Hacks. All rights reserved.</footer>
+	<footer>
+		<div class="row">
+			<div>
+				<p class="social-media">
+					<a href="https://facebook.com/losaltoshacks" title="Facebook: /losaltoshacks" target="_blank" style="color: #3a589b"><svg height="67" width="67"><path d="M29.765 50.32h6.744V33.998h4.499l.596-5.624h-5.095l.007-2.816c0-1.466.14-2.253 2.244-2.253h2.812V17.68h-4.5c-5.405 0-7.307 2.729-7.307 7.317v3.377h-3.369v5.625h3.369V50.32zM34 64C17.432 64 4 50.568 4 34 4 17.431 17.432 4 34 4s30 13.431 30 30c0 16.568-13.432 30-30 30z" fill-rule="evenodd" fill="currentColor"/></svg></a>
+					<a href="https://twitter.com/losaltoshacks" title="Twitter: @losaltoshacks" target="_blank" style="color: #598dca"><svg height="67" width="67"><path d="M38.167 22.283c-2.619.953-4.274 3.411-4.086 6.101l.063 1.038-1.048-.127c-3.813-.487-7.145-2.139-9.974-4.915l-1.383-1.377-.356 1.017c-.754 2.267-.272 4.661 1.299 6.271.838.89.649 1.017-.796.487-.503-.169-.943-.296-.985-.233-.146.149.356 2.076.754 2.839.545 1.06 1.655 2.097 2.871 2.712l1.027.487-1.215.021c-1.173 0-1.215.021-1.089.467.419 1.377 2.074 2.839 3.918 3.475l1.299.444-1.131.678a11.751 11.751 0 0 1-5.616 1.567c-.944.021-1.719.106-1.719.17 0 .211 2.557 1.397 4.044 1.864 4.463 1.377 9.765.783 13.746-1.568 2.829-1.674 5.657-5 6.978-8.221.713-1.715 1.425-4.851 1.425-6.354 0-.975.063-1.102 1.236-2.267.692-.678 1.341-1.419 1.467-1.631.21-.403.188-.403-.88-.043-1.781.636-2.033.551-1.152-.402.649-.678 1.425-1.907 1.425-2.267 0-.063-.314.042-.671.233-.377.212-1.215.53-1.844.72l-1.131.361-1.027-.7c-.566-.381-1.361-.805-1.781-.932-1.069-.296-2.704-.254-3.668.085zM34 64C17.432 64 4 50.568 4 34 4 17.431 17.432 4 34 4s30 13.431 30 30c0 16.568-13.432 30-30 30z" fill-rule="evenodd" fill="currentColor"/></svg></a>
+					<a href="https://instagram.com/losaltoshacks" title="Instagram: @losaltoshacks" target="_blank" style="color: #bc2a8d"><svg width="67" height="67"><path d="M43.271 26.578v-.006c.502 0 1.005.01 1.508-.002.646-.016 1.172-.57 1.172-1.217v-2.89c0-.691-.547-1.24-1.236-1.241h-2.883a1.234 1.234 0 0 0-1.236 1.243c-.001.955-.004 1.91.003 2.865a1.4 1.4 0 0 0 .073.426c.173.508.639.82 1.209.823l1.39-.001zM34 27.817a6.181 6.181 0 0 0-.142 12.361c3.454.074 6.248-2.686 6.321-6.043.075-3.46-2.717-6.32-6.179-6.318zm-11.954 3.299v13.627c0 .649.562 1.208 1.212 1.208h21.479c.656 0 1.215-.557 1.215-1.212V31.117H43.04a9.545 9.545 0 0 1 .376 4.014c-.161 1.363-.601 2.631-1.316 3.803s-1.644 2.145-2.779 2.918a9.482 9.482 0 0 1-9.946.428c-1.579-.885-2.819-2.12-3.685-3.713-1.289-2.373-1.495-4.865-.739-7.451h-2.905zm24.159 18.139c.159-.026.318-.049.475-.083 1.246-.265 2.264-1.304 2.508-2.557.025-.137.045-.273.067-.409V21.794c-.021-.133-.04-.268-.065-.401a3.301 3.301 0 0 0-2.78-2.618c-.058-.007-.113-.02-.17-.03H21.761c-.147.027-.296.047-.441.08a3.29 3.29 0 0 0-2.545 2.766c-.008.057-.02.114-.029.171V46.24c.028.154.05.311.085.465a3.302 3.302 0 0 0 2.77 2.52c.064.008.13.021.195.03h24.409zM34 64C17.432 64 4 50.568 4 34 4 17.431 17.432 4 34 4s30 13.431 30 30c0 16.568-13.432 30-30 30z" fill-rule="evenodd" fill="currentColor"/></svg></a>
+				</p>
+				<p>Copyright © 2017-2018 Los Altos Hacks. All rights reserved.</p>
+			</div>
+		</div>
+	</footer>
 	<script src="js/main.js"></script>
 	<script src="js/teaser-animation.js"></script>
+	<script>(function() { var qs,js,q,s,d=document, gi=d.getElementById, ce=d.createElement, gt=d.getElementsByTagName, id="typef_orm_share", b="https://embed.typeform.com/"; if(!gi.call(d,id)){ js=ce.call(d,"script"); js.id=id; js.src=b+"embed.js"; q=gt.call(d,"script")[0]; q.parentNode.insertBefore(js,q) } })() </script>
+	<a id="mlh-trust-badge" style="display:block;max-width:100px;min-width:60px;position:fixed;right:20px;top:0;width:10%;z-index:10000" href="https://mlh.io/seasons/na-2018/events?utm_source=na-2018&utm_medium=TrustBadge&utm_campaign=na-2018&utm_content=white" target="_blank"><img src="https://s3.amazonaws.com/logged-assets/trust-badge/2018/white.svg" alt="Major League Hacking 2017 Hackathon Season" style="width:100%"></a>
 </body>
 
 </html>
