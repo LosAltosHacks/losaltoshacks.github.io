@@ -382,9 +382,31 @@ details[open] > summary + * {
 }
 
 
-#schedule table, #schedule h3 {
-	border-spacing: 0.5rem 1rem;
+#schedule h3 {
+	margin-top: 1.75rem;
+}
+#schedule table {
+	border-radius: 0.25rem;
+	overflow: hidden;
+	margin-top: 0.75rem;
 	text-align: left;
+	min-width: 100%;
+	border-collapse: collapse;
+}
+#schedule tr > * {
+	padding: 0.4rem 0.6rem;
+}
+#schedule tr:nth-of-type(even) {
+	background-color: rgba(0, 60, 120, 0.01);
+}
+#schedule tr:nth-of-type(odd) {
+	background-color: rgba(0, 60, 120, 0.03);
+}
+#schedule tr:first-of-type {
+	background-color: rgba(0, 60, 120, 0.08);
+}
+#schedule tr > :first-child {
+	text-align: right;
 }
 
 
