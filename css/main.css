@@ -182,6 +182,9 @@ hr {
 	max-width: var(--site-width);
 	width: 100%;
 }
+.row > * {
+	max-width: 100%;
+}
 .row.columns-half > * {
 	flex: 1 320px;
 }
@@ -227,7 +230,7 @@ hr {
 	}
 }
 @media (max-width: 469px) {
-	.apply-now-text {
+	#apply h2 {
 		width: 100%;
 	}
 }
@@ -386,12 +389,12 @@ details[open] > summary + * {
 	margin-top: 1.75rem;
 }
 #schedule table {
+	border-collapse: collapse;
 	border-radius: 0.25rem;
 	overflow: hidden;
 	margin-top: 0.75rem;
 	text-align: left;
-	min-width: 100%;
-	border-collapse: collapse;
+	max-width: 100%;
 }
 #schedule tr > * {
 	padding: 0.4rem 0.6rem;
@@ -407,6 +410,7 @@ details[open] > summary + * {
 }
 #schedule tr > :first-child {
 	text-align: right;
+	white-space: nowrap;
 }
 
 
