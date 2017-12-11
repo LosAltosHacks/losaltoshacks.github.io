@@ -342,6 +342,11 @@ hr {
 .faq-wrapper > * {
 	padding: 0 0.5rem;
 }
+.subject-to-change {
+	color: var(--accent-hover-color);
+	font-size: 0.75em;
+	text-align: left;
+}
 
 summary {
 	display: flex;
@@ -430,6 +435,7 @@ details[open] > summary + * {
 .team-wrapper img {
 	border-radius: 50%;
 	transition: 0.3s;
+	max-height: 230px;
 }
 .team-wrapper figure:hover img {
 	transform: scale(1.1);
