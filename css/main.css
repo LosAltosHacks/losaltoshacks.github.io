@@ -342,11 +342,6 @@ hr {
 .faq-wrapper > * {
 	padding: 0 0.5rem;
 }
-.subject-to-change {
-	color: var(--accent-hover-color);
-	font-size: 0.75em;
-	text-align: left;
-}
 
 summary {
 	display: flex;
