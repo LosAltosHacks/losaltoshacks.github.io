@@ -1,5 +1,5 @@
 :root {
-	--site-width: 800px;
+	--site-width: 32rem; /* 800px */
 	--side-padding: calc((100vw - var(--site-width)) / 2);
 	--nav-background-color: rgba(240, 245, 255, 0.9);
 	--nav-height: 3rem;
