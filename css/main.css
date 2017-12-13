@@ -185,6 +185,9 @@ hr {
 .row > * {
 	max-width: 100%;
 }
+.row > :not(:only-child) {
+	padding: 1rem;
+}
 .row.columns-half > * {
 	flex: 1 320px;
 }
@@ -193,13 +196,16 @@ hr {
 }
 .row.columns-small > * {
 	flex: 1 1 calc(130px + 10vw);
-	max-width: calc((130px + 10vw) * 1.5);
+	max-width: calc((130px + 10vw) * 1.352);
 }
 .row.columns-tiny > * {
 	flex: 1 calc(90px + 8vw);
+	max-width: calc((90px + 8vw) * 1.25);
 }
-.row > :not(:only-child) {
-	padding: 1rem;
+.row.columns-tinier > * {
+	flex: 1 calc(80px + 5vw);
+    padding: 0.5rem;
+	max-width: calc((80px + 5vw) * 1.5);
 }
 .row > * > * + * {
 	margin-top: 1rem;
@@ -414,30 +420,28 @@ details[open] > summary + * {
 }
 
 
-.team-wrapper {
+#team .team-wrapper {
 	font-size: 0.9em;
 	align-items: start;
 }
-#team .team-wrapper figure {
+#team figure, #judges figure {
 	margin: 0;
 	padding: 0.75rem;
 }
-@media (min-width: 424px) {
-	.team-wrapper.columns-small figure {
-		max-width: 40vw;
-	}
-}
-.team-wrapper img {
+figure img {
 	border-radius: 50%;
 	transition: 0.3s;
 	max-height: 230px;
 }
-.team-wrapper figure:hover img {
+figure:hover img {
 	transform: scale(1.1);
 }
-.team-wrapper figcaption {
+.row figure h4 {
+	margin-top: 0.75em;
+}
+.row figure figcaption {
 	font-size: 0.8em;
-	margin: 0;
+	margin-top: 0.25em;
 }
 
 
