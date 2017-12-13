@@ -1,4 +1,4 @@
-![Los Altos Hacks](https://github.com/LosAltosHacks/losaltoshacks.github.io/blob/master/images/social-media.jpg "Los Altos Hacks")
+![Los Altos Hacks](https://raw.githubusercontent.com/LosAltosHacks/losaltoshacks.github.io/master/images/social-media.jpg "Los Altos Hacks")
 
 # losaltoshacks.github.io
 
