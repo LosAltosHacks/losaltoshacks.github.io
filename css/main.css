@@ -444,6 +444,11 @@ figure:hover img {
 	margin-top: 0.25em;
 }
 
+.row figure #company {
+	font-size: 0.8em;
+	margin-top: 0.25em;
+	font-weight: bold;
+}
 
 #partners img {
 	max-height: calc(40px + 6vw);
