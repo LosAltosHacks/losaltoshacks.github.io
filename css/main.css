@@ -444,9 +444,10 @@ figure:hover img {
 	margin-top: 0.25em;
 }
 
-.row figure #company {
-	font-size: 0.8em;
-	margin-top: 0.25em;
+.judges-wrapper {
+	align-items: start;
+}
+.judges-wrapper figure figcaption:nth-of-type(2) {
 	font-weight: bold;
 }
 
