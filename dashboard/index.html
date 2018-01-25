@@ -72,7 +72,7 @@ const notifiedAnnouncementIDs = new Set(
 )
 
 async function update(){
-	const data = await fetch('https://api.airtable.com/v0/appyBL9141i93Q56b/Announcements?view=Grid%20view&api_key=keyvIr2OT4Nlo4sXo').then(data => data.json())
+	const data = await fetch('https://api.airtable.com/v0/appyBL9141i93Q56b/Announcements?api_key=keyvIr2OT4Nlo4sXo&view=Grid%20view&filterByFormula={Published}').then(data => data.json())
 	const announcements = data.records
 	console.log(announcements)
 	
