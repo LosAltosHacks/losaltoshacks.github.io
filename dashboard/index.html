@@ -1,0 +1,124 @@
+<title>Dashboard - Los Altos Hacks</title>
+
+<link rel="stylesheet" href="../css/fonts.css">
+<style>
+	* {
+		box-sizing: border-box;
+		font-family: DIN;
+		margin: 0;
+	}
+	:root {
+		font-size: 22px;
+	}
+	body, main, header {
+		display: grid;
+		grid-gap: 2rem;
+	}
+	body {
+		background: radial-gradient(#67b6e181, #67b7e1);
+		padding: 3rem;
+	}
+	main {
+		grid-gap: 1rem;
+	}
+	header {
+		grid-auto-flow: column;
+		justify-content: center;
+		align-items: center;
+	}
+
+	main h2 {
+		text-align: center;
+	}
+
+	#announcements {
+		display: grid;
+		grid-gap: 1rem;
+	}
+	#announcements > * {
+		border-radius: 1rem;
+		display: grid;
+		grid-gap: 0.75rem;
+		padding: 2rem;
+		background-color: rgba(255, 255, 255, 0.7);
+	}
+	.announcement date {
+		color: rgba(0, 0, 0, 0.7);
+		font-size: 0.8em;
+		text-align: right;
+	}
+</style>
+
+<header>
+	<img src="../images/Los-Altos-Hacks-Logo.svg" width="300">
+	<div>
+		<h1>Los Altos Hacks</h1>
+		<h2>Dashboard</h2>
+	</div>
+</header>
+
+<main>
+	<h2>Announcements</h2>
+	<div id="announcements">
+		<h3>Loading...</h3>
+	</div>
+</main>
+
+<script src="moment.min.js"></script>
+<script>
+const $announcements = document.querySelector('#announcements')
+const notifiedAnnouncementIDs = new Set(
+	(localStorage.getItem('notifiedAnnouncementIDs') || '').split(',')
+)
+
+async function update(){
+	const data = await fetch('https://api.airtable.com/v0/appyBL9141i93Q56b/Announcements?api_key=keyvIr2OT4Nlo4sXo&view=Grid%20view&filterByFormula={Published}').then(data => data.json())
+	const announcements = data.records
+	console.log(announcements)
+	
+	const mNow = moment()
+	
+	$announcements.innerHTML = ''
+	for(const announcement of announcements){
+		const {
+			'Title': title = '',
+			'Time': time = '',
+			'Announcement': text = '',
+		} = announcement.fields
+
+		if(!text) continue
+
+		const mTime = moment(time)
+		if(mTime.isAfter(mNow)) continue
+
+		$announcements.insertAdjacentHTML('afterbegin', `
+			<div class="announcement">
+				<h3>${title}</h3>
+				<p>${text}</p>
+				<date>${mTime.calendar()} (${mTime.fromNow()})</date>
+			</div>
+		`)
+
+		if(Notification.permission === 'granted'){
+			const id = announcement.id
+			if(!notifiedAnnouncementIDs.has(id)){
+				notifiedAnnouncementIDs.add(id)
+			
+				new Notification(title, {
+					body: text,
+					tag: id,
+					icon: '../favicon.png',
+					badge: '../favicon.png',
+					renotify: true
+				})
+			}
+		}
+	}
+
+	localStorage.setItem('notifiedAnnouncementIDs', [...notifiedAnnouncementIDs].join(','))
+}
+update()
+setInterval(() => update(), 10000)
+
+Notification.requestPermission()
+</script>
