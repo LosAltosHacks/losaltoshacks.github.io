@@ -486,3 +486,11 @@ figure:hover img {
 	text-shadow: #3498db 0 0 19px;
 	color: #02a2dd;
 }
+
+
+/* Workaround for "disappearing Typeform" bug */
+/* See https://codepen.io/darrylyeo/pen/gvONMG */
+iframe {
+	-webkit-transform: none !important;
+	transform: none !important;
+}
