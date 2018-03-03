@@ -122,7 +122,6 @@ header a[title]:not(:hover):after {
 }
 #logo img {
 	max-width: 100%;
-	min-width: 180px;
 }
 
 #title {
