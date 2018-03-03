@@ -20,6 +20,8 @@ a {
 	transition: 0.3s;
 }
 h1 {
+	font-size: 2.5rem;
+	font-weight: 900;
 	text-transform: uppercase;
 	letter-spacing: 0.025em;
 	white-space: nowrap;
@@ -126,10 +128,6 @@ header a[title]:not(:hover):after {
 
 #title {
 	grid-area: title;
-}
-#title h1 {
-	font-family: "DIN Black";
-	font-size: 2.5rem;
 }
 
 #social-media {
