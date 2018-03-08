@@ -449,6 +449,12 @@ figure:hover img {
 .judges-wrapper figure figcaption:nth-of-type(2) {
 	font-weight: bold;
 }
+#judges figure h4 {
+	font-size: 0.7em;
+}
+#judges figure figcaption {
+	font-size: 0.5em;
+}
 
 #partners img {
 	max-height: calc(40px + 6vw);
