@@ -426,11 +426,15 @@ details[open] > summary + * {
 #team figure, #judges figure {
 	margin: 0;
 	padding: 0.75rem;
+	max-width: 225px;
 }
 figure img {
 	border-radius: 50%;
 	transition: 0.3s;
 	max-height: 230px;
+	-webkit-box-shadow: 0px 3px 13px 0px rgba(0,0,0,0.15);
+	-moz-box-shadow: 0px 3px 13px 0px rgba(0,0,0,0.15);
+	box-shadow: 0px 3px 13px 0px rgba(0,0,0,0.15);
 }
 figure:hover img {
 	transform: scale(1.1);
