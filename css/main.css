@@ -400,9 +400,10 @@ details[open] > summary + * {
 	margin-top: 0.75rem;
 	text-align: left;
 	max-width: 100%;
+	font-size: .75em;
 }
 #schedule tr > * {
-	padding: 0.4rem 0.6rem;
+	padding: 0.2rem 0.5rem;
 }
 #schedule tr:nth-of-type(even) {
 	background-color: rgba(0, 60, 120, 0.01);
