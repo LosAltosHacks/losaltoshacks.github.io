@@ -1,7 +1,9 @@
 <title>Dashboard - Los Altos Hacks</title>
+<meta charset="utf-8">
 
 <link rel="stylesheet" href="../css/fonts.css">
 <link rel="stylesheet" href="style.css">
+
 <header>
 	<a href="https://losaltoshacks.com" id="logo" title="Los Altos Hacks">
 		<img src="../images/Los-Altos-Hacks-Logo-White.svg" width="250">
@@ -89,8 +91,13 @@ update()
 setInterval(() => update(), 10000)
 
 const $notificationsButton = document.querySelector('#request-notifications')
-if(Notification.permission === 'granted') $notificationsButton.hidden = true
+function updateNotificationsButton(){
+	const granted = Notification.permission !== 'granted'
+	$notificationsButton.disabled = granted
+	$notificationsButton.textContent = granted ? 'Subscribed ✓' : 'Get Desktop Notifications'
+}
+updateNotificationsButton()
 $notificationsButton.addEventListener('click', () => {
-	Notification.requestPermission()
+	Notification.requestPermission().then(updateNotificationsButton)
 })
 </script>
