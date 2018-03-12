@@ -397,13 +397,14 @@ details[open] > summary + * {
 	border-collapse: collapse;
 	border-radius: 0.25rem;
 	overflow: hidden;
+	margin: auto;
 	margin-top: 0.75rem;
 	text-align: left;
 	max-width: 100%;
-	font-size: .75em;
+	font-size: 0.9em;
 }
 #schedule tr > * {
-	padding: 0.2rem 0.5rem;
+	padding: 0.3rem 0.5rem;
 }
 #schedule tr:nth-of-type(even) {
 	background-color: rgba(0, 60, 120, 0.01);
@@ -417,6 +418,9 @@ details[open] > summary + * {
 #schedule tr > :first-child {
 	text-align: right;
 	white-space: nowrap;
+}
+#schedule * + p {
+	font-size: 0.85em;
 }
 
 
