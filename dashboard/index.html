@@ -21,7 +21,7 @@
 
 <main>
 	<section>
-		<h2>Announcements</h2>
+		<h2><span>Announcements</span><button id="request-notifications">Get Desktop Notifications</button></h2>
 		<div id="announcements">
 			<h3>Loading...</h3>
 		</div>
@@ -40,7 +40,7 @@ const notifiedAnnouncementIDs = new Set(
 )
 
 async function update(){
-	const data = await fetch('https://api.airtable.com/v0/appyBL9141i93Q56b/Announcements?api_key=keyvIr2OT4Nlo4sXo&view=Grid%20view&filterByFormula={Published}').then(data => data.json())
+	const data = await fetch('https://api.airtable.com/v0/app5T2bTt9ZPoK4U5/Announcements?api_key=keykXpACZKknGof6z&view=Grid%20view&filterByFormula={Published}').then(data => data.json())
 	const announcements = data.records
 	console.log(announcements)
 
@@ -88,5 +88,9 @@ async function update(){
 update()
 setInterval(() => update(), 10000)
 
-Notification.requestPermission()
+const $notificationsButton = document.querySelector('#request-notifications')
+if(Notification.permission === 'granted') $notificationsButton.hidden = true
+$notificationsButton.addEventListener('click', () => {
+	Notification.requestPermission()
+})
 </script>
