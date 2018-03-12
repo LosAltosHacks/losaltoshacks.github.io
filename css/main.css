@@ -199,7 +199,7 @@ hr {
 }
 .row.columns-tiny > * {
 	flex: 1 calc(90px + 8vw);
-	max-width: calc((90px + 8vw) * 1.1);
+	max-width: calc((90px + 8vw) * 1.25);
 }
 .row.columns-tinier > * {
 	flex: 1 calc(80px + 5vw);
@@ -431,6 +431,7 @@ details[open] > summary + * {
 #team figure, #judges figure {
 	margin: 0;
 	padding: 0.75rem;
+	max-width: 225px;
 }
 figure img {
 	border-radius: 50%;
@@ -444,6 +445,7 @@ figure:hover img {
 	transform: scale(1.1);
 }
 .row figure h4 {
+	margin: 0 -3em;
 	margin-top: 0.75em;
 }
 .row figure figcaption {
@@ -452,16 +454,12 @@ figure:hover img {
 }
 
 .judges-wrapper {
+	font-size: 0.85em;
 	align-items: start;
 }
 .judges-wrapper figure figcaption:nth-of-type(2) {
 	font-weight: bold;
-}
-#judges figure h4 {
 	font-size: 0.7em;
-}
-#judges figure figcaption {
-	font-size: 0.5em;
 }
 
 #partners img {
