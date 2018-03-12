@@ -199,7 +199,7 @@ hr {
 }
 .row.columns-tiny > * {
 	flex: 1 calc(90px + 8vw);
-	max-width: calc((90px + 8vw) * 1.25);
+	max-width: calc((90px + 8vw) * 1.1);
 }
 .row.columns-tinier > * {
 	flex: 1 calc(80px + 5vw);
@@ -427,7 +427,6 @@ details[open] > summary + * {
 #team figure, #judges figure {
 	margin: 0;
 	padding: 0.75rem;
-	max-width: 225px;
 }
 figure img {
 	border-radius: 50%;
