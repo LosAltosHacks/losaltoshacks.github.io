@@ -152,7 +152,7 @@ main {
 	/* grid-auto-flow: column; */
 	grid-template-columns: auto auto;
 }
-@media (max-width: 480px) {
+@media (max-width: 520px) {
 	main {
 		grid-template-columns: auto;
 		grid-gap: 2rem;
@@ -166,6 +166,12 @@ main section {
 
 
 main h2 {
+	display: grid;
+	grid-auto-flow: column;
+	grid-auto-columns: min-content min-content;
+	justify-content: space-between;
+	align-items: center;
+	grid-gap: 0.5em;
 	text-shadow: var(--shadow);
 	/* text-align: center; */
 }
@@ -175,6 +181,7 @@ main h2 {
 	display: grid;
 	grid-gap: 1rem;
 	max-width: 50rem;
+	width: 100%;
 }
 .announcement {
 	border-radius: 0.25rem;
@@ -191,6 +198,50 @@ main h2 {
 @media (min-width: 571px) {
 	.announcement date {
 		text-align: right;
+	}
+}
+
+button {
+	background: linear-gradient(45deg, #71c2e5, #5bd2de, #a7d8f5) 0/200%;
+	border-radius: 0.25rem;
+	box-shadow: var(--shadow);
+	border: none;
+	color: rgba(255, 255, 255, 0.9);
+	font-size: 0.48em;
+	padding: 0.6em 0.9em;
+	text-transform: uppercase;
+	font-weight: bold;
+	line-height: 1;
+	text-shadow: var(--shadow);
+	transition: 0.3s;
+	cursor: pointer;
+	border-bottom: rgba(62, 145, 204, 0.64) 1px solid;
+	outline: none;
+}
+button:not([disabled]):hover {
+	background-position: 100%;
+	transform: scale(1.05) translateY(-1px);
+}
+button:active {
+	transform: scale(0.99);
+	transition: 0.1s;
+}
+button[disabled] {
+	background: rgba(255, 255, 255, 0.6);
+	color: rgb(90, 162, 206);
+	border-bottom: none;
+	box-shadow: none;
+	text-shadow: none;
+}
+
+@media (min-width: 810px) {
+	#request-notifications {
+		white-space: nowrap;
+	}
+}
+@media (max-width: 650px) {
+	#request-notifications {
+		display: none;
 	}
 }
 
