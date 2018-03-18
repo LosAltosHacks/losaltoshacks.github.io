@@ -12,8 +12,14 @@ body {
 	background: radial-gradient(#29aad6, #006daf) 0/100vmax 100vmax fixed;
 	color: #f5fdff;
 	display: grid;
-	padding: 1.25rem;
-	grid-gap: 1.5rem;
+	/* padding: 1.25rem; */
+	padding: calc(0.8rem + 2.5vw);
+	grid-gap: 2.5rem;
+}
+
+img {
+	display: block;
+	max-width: 100%;
 }
 
 a {
@@ -37,7 +43,7 @@ header {
 
 	justify-content: center;
 	align-items: center;
-	padding: 1rem;
+	/* padding: 1rem; */
 	grid-gap: 1.5rem;
 	grid-gap: calc(0.5rem + 1.5vw);
 
@@ -120,9 +126,6 @@ header a[title]:not(:hover):after {
 	mix-blend-mode: screen;
 	max-width: calc(10rem + 2.5vw);
 }
-#logo img {
-	max-width: 100%;
-}
 
 #title {
 	grid-area: title;
@@ -147,10 +150,8 @@ main {
 	display: grid;
 	grid-gap: calc(0.5rem + 1.5vw);
 	justify-content: center;
-}
-main {
 	/* grid-auto-flow: column; */
-	grid-template-columns: auto auto;
+	grid-template-columns: minmax(auto, 40rem) auto;
 }
 @media (max-width: 520px) {
 	main {
@@ -174,6 +175,9 @@ main h2 {
 	grid-gap: 0.5em;
 	text-shadow: var(--shadow);
 	/* text-align: center; */
+}
+main img {
+	border-radius: 0.25em;
 }
 
 #announcements {
@@ -245,6 +249,6 @@ button[disabled] {
 	}
 }
 
-iframe[id^=twitter] {
+/*iframe[id^=twitter] {
 	max-height: 60vh;
-}
+}*/
