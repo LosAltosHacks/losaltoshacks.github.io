@@ -302,9 +302,13 @@ hr {
 }
 #top-text .venue {
 	margin-top: 0.5rem;
+	line-height: 1;
 }
 #top-text .address {
 	font-size: 0.7em;
+}
+#top-text a {
+	font-weight: normal;
 }
 
 /*#email-signup {
@@ -320,12 +324,15 @@ hr {
 #top-main {
 	grid-area: top-main;
 }
-.button {
+.button, .row > .button {
 	display: flex;
 	line-height: 1;
 	color: white;
 	margin: 0.4rem;
 	transform: skew(-15deg);
+	text-transform: uppercase;
+	letter-spacing: 0.05em;
+	padding: 0.65em 1em;
 }
 .button.blue {
 	background-color: var(--blue);
