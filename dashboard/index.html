@@ -65,7 +65,7 @@ async function update(){
 		$announcements.insertAdjacentHTML('afterbegin', `
 			<div class="announcement">
 				<h3>${title}</h3>
-				<p>${text}</p>
+				<p>${text.replace(/\n\n/g, '</p><p>')}</p>
 				<date>${mTime.calendar()} (${mTime.fromNow()})</date>
 			</div>
 		`)
