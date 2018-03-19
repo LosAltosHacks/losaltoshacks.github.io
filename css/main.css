@@ -222,7 +222,7 @@ hr {
 	display: grid;
 	grid-template-areas:
 		'logo details'
-		'apply apply';
+		'top-main top-main';
 	grid-template-columns: 40% auto;
 	grid-gap: 1rem;
 	text-align: left;
@@ -236,13 +236,13 @@ hr {
 		grid-template-areas:
 			'logo'
 			'details'
-			'apply';
+			'top-main';
 		grid-template-columns: auto;
 		text-align: center;
 	}
 }
 @media (max-width: 469px) {
-	#apply h2 {
+	#top-main h2 {
 		width: 100%;
 	}
 }
@@ -317,8 +317,8 @@ hr {
 	margin: 2rem auto 0;
 }*/
 
-#apply {
-	grid-area: apply;
+#top-main {
+	grid-area: top-main;
 }
 .button {
 	display: flex;
@@ -339,6 +339,10 @@ hr {
 .button span {
 	display: inline-block;
 	transform: skew(15deg);
+}
+
+#countdown {
+	font-variant: small-caps;
 }
 
 #about {
