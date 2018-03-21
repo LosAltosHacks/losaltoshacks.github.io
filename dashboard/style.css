@@ -226,7 +226,7 @@ button:not([disabled]):hover {
 	background-position: 100%;
 	transform: scale(1.05) translateY(-1px);
 }
-button:active {
+button:not([disabled]):active {
 	transform: scale(0.99);
 	transition: 0.1s;
 }
