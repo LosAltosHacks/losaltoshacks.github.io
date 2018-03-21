@@ -210,7 +210,7 @@ hr {
 }
 .row.columns-tinier > * {
 	flex: 1 calc(80px + 5 * var(--vw));
-    padding: 0.5rem;
+	padding: 0.5rem;
 	max-width: calc((80px + 5 * var(--vw)) * 1.5);
 }
 .row > * > * + * {
@@ -385,15 +385,15 @@ summary:after {
 	content: '';
 	display: table;
 	border: solid;
-    border-width: 0 0.2em 0.2em 0;
-    font-size: 0.66em;
-    width: 1em;
-    height: 1em;
-    transform: translateX(-0.3536em) rotate(-45deg);
-    transition: transform 0.3s;
+	border-width: 0 0.2em 0.2em 0;
+	font-size: 0.66em;
+	width: 1em;
+	height: 1em;
+	transform: translateX(-0.3536em) rotate(-45deg);
+	transition: transform 0.3s;
 }
 details[open] > summary:after {
-    transform: translateY(-0.3536em) rotate(45deg);
+	transform: translateY(-0.3536em) rotate(45deg);
 }
 details > summary + * {
 	animation: DetailsOpen 0.5s linear;
