@@ -348,9 +348,6 @@ hr {
 	transform: skew(15deg);
 }
 
-#countdown-label {
-	color: darkslategray;
-}
 #countdown, #countdown-label {
 	font-variant: small-caps;
 	color: darkslategray;
@@ -422,6 +419,7 @@ details[open] > summary + * {
 	margin: auto;
 	margin-top: 0.75rem;
 	text-align: left;
+	width: 100%;
 	max-width: 100%;
 	font-size: 0.9em;
 }
@@ -443,9 +441,6 @@ details[open] > summary + * {
 }
 #schedule * + p {
 	font-size: 0.85em;
-}
-table {
-	width: 100%;
 }
 
 
