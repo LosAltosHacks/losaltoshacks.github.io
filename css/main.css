@@ -109,6 +109,34 @@ input[type=submit]:hover {
 }
 
 
+table {
+	border-collapse: collapse;
+	border-radius: 0.25rem;
+	overflow: hidden;
+	margin: auto;
+	margin-top: 0.75rem;
+	text-align: left;
+	max-width: 100%;
+	font-size: 0.9em;
+}
+tr > * {
+	padding: 0.3rem 0.5rem;
+}
+tr:nth-of-type(even) {
+	background-color: rgba(0, 60, 120, 0.01);
+}
+tr:nth-of-type(odd) {
+	background-color: rgba(0, 60, 120, 0.03);
+}
+tr:first-of-type {
+	background-color: rgba(0, 60, 120, 0.08);
+}
+tr > :first-child {
+	text-align: right;
+	white-space: nowrap;
+}
+
+
 nav, nav ul, nav ul li {
 	display: flex;
 }
@@ -412,32 +440,8 @@ details[open] > summary + * {
 #schedule h3 {
 	margin-top: 1.75rem;
 }
-table {
-	border-collapse: collapse;
-	border-radius: 0.25rem;
-	overflow: hidden;
-	margin: auto;
-	margin-top: 0.75rem;
-	text-align: left;
+#schedule table {
 	width: 100%;
-	max-width: 100%;
-	font-size: 0.9em;
-}
-tr > * {
-	padding: 0.3rem 0.5rem;
-}
-tr:nth-of-type(even) {
-	background-color: rgba(0, 60, 120, 0.01);
-}
-tr:nth-of-type(odd) {
-	background-color: rgba(0, 60, 120, 0.03);
-}
-tr:first-of-type {
-	background-color: rgba(0, 60, 120, 0.08);
-}
-tr > :first-child {
-	text-align: right;
-	white-space: nowrap;
 }
 #schedule * + p {
 	font-size: 0.85em;
