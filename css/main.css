@@ -122,14 +122,14 @@ table {
 tr > * {
 	padding: 0.3rem 0.5rem;
 }
-tr:nth-of-type(even) {
+tr th {
+	background-color: rgba(0, 60, 120, 0.08);
+}
+tr:nth-of-type(even) td {
 	background-color: rgba(0, 60, 120, 0.01);
 }
-tr:nth-of-type(odd) {
+tr:nth-of-type(odd) td {
 	background-color: rgba(0, 60, 120, 0.03);
-}
-tr:first-of-type {
-	background-color: rgba(0, 60, 120, 0.08);
 }
 tr > :first-child {
 	text-align: right;
