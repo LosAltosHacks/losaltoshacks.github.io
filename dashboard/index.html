@@ -70,13 +70,15 @@ async function update(){
 			</div>
 		`)
 
+		const textStripped = new DOMParser().parseFromString(text, 'text/html').body.innerText
+
 		if(Notification.permission === 'granted'){
 			const id = announcement.id
 			if(!notifiedAnnouncementIDs.has(id)){
 				notifiedAnnouncementIDs.add(id)
 
 				new Notification(title, {
-					body: text,
+					body: textStripped,
 					tag: id,
 					icon: '../favicon.png',
 					badge: '../favicon.png',
