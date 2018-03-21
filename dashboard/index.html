@@ -95,7 +95,7 @@ setInterval(() => update(), 10000)
 
 const $notificationsButton = document.querySelector('#request-notifications')
 function updateNotificationsButton(){
-	const granted = Notification.permission !== 'granted'
+	const granted = Notification.permission === 'granted'
 	$notificationsButton.disabled = granted
 	$notificationsButton.textContent = granted ? 'Subscribed ✓' : 'Get Desktop Notifications'
 }
