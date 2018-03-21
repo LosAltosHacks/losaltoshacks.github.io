@@ -412,7 +412,7 @@ details[open] > summary + * {
 #schedule h3 {
 	margin-top: 1.75rem;
 }
-#schedule table {
+table {
 	border-collapse: collapse;
 	border-radius: 0.25rem;
 	overflow: hidden;
@@ -423,19 +423,19 @@ details[open] > summary + * {
 	max-width: 100%;
 	font-size: 0.9em;
 }
-#schedule tr > * {
+tr > * {
 	padding: 0.3rem 0.5rem;
 }
-#schedule tr:nth-of-type(even) {
+tr:nth-of-type(even) {
 	background-color: rgba(0, 60, 120, 0.01);
 }
-#schedule tr:nth-of-type(odd) {
+tr:nth-of-type(odd) {
 	background-color: rgba(0, 60, 120, 0.03);
 }
-#schedule tr:first-of-type {
+tr:first-of-type {
 	background-color: rgba(0, 60, 120, 0.08);
 }
-#schedule tr > :first-child {
+tr > :first-child {
 	text-align: right;
 	white-space: nowrap;
 }
