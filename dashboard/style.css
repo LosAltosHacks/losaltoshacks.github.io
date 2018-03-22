@@ -195,7 +195,6 @@ main a:hover {
 }
 main img {
 	filter: drop-shadow(0 2px 2px rgba(0, 0, 0, 0.15));
-	/* will-change: transform; */
 	image-rendering: -webkit-optimize-contrast;
 }
 main a:hover img {
