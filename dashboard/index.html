@@ -25,8 +25,6 @@
 <main>
 	<section>
 		<h2><span>Announcements</span><button id="request-notifications">Get Desktop Notifications</button></h2>
-		<div id="pinned-announcements">
-		</div>
 		<div id="announcements">
 			<h3>Loading...</h3>
 		</div>
@@ -40,7 +38,6 @@
 <script src="../js/moment.min.js"></script>
 <script>
 const $announcements = document.querySelector('#announcements')
-const $pinnedAnnouncements = document.querySelector('#pinned-announcements')
 
 const notifiedAnnouncementIDs = new Set(
 	(localStorage.getItem('notifiedAnnouncementIDs') || '').split(',')
@@ -54,9 +51,7 @@ async function update(){
 	const mNow = moment()
 
 	$announcements.innerHTML = ''
-	$pinnedAnnouncements.innerHTML = ''
 
-	var announcementsElement;
 	for(const announcement of announcements){
 		const {
 			'Title': title = '',
@@ -70,17 +65,11 @@ async function update(){
 		const mTime = moment(time)
 		if(mTime.isAfter(mNow)) continue
 
-		if(announcement.fields['Pinned'])
-			announcementsElement = $pinnedAnnouncements
-		else
-		 	announcementsElement = $announcements
-
-		announcementsElement.insertAdjacentHTML('afterbegin', `
-			<div class="announcement">
-				<h6>${pinned ? `(Pinned)` : ''}</h6>
+		$announcements.insertAdjacentHTML('afterbegin', `
+			<div class="announcement ${pinned ? 'pinned' : ''}">
 				<h3>${title}</h3>
 				<p>${text.replace(/\n\n/g, '</p><p>')}</p>
-				<date>${mTime.calendar()} (${mTime.fromNow()})</date>
+				<footer><span class="pinned-label">Pinned</span><date>${mTime.calendar()} (${mTime.fromNow()})</date></footer>
 			</div>
 		`)
 
