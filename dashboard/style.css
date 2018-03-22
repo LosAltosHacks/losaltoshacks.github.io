@@ -202,12 +202,13 @@ main a:hover img {
 	filter: drop-shadow(0 5px 4px rgba(0, 0, 0, 0.15));
 }
 
-#announcements {
+#announcements, #pinned-announcements {
 	color: rgba(0, 25, 53, 0.9);
 	display: grid;
 	grid-gap: 1rem;
 	max-width: 50rem;
 	width: 100%;
+	margin-bottom: 2rem;
 }
 .announcement {
 	border-radius: 0.25rem;
