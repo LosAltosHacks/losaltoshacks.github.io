@@ -202,7 +202,7 @@ main a:hover img {
 	filter: drop-shadow(0 5px 4px rgba(0, 0, 0, 0.15));
 }
 
-#announcements, #pinned-announcements {
+#announcements {
 	color: rgba(0, 25, 53, 0.9);
 	display: grid;
 	grid-gap: 1rem;
@@ -218,13 +218,35 @@ main a:hover img {
 	background-color: rgba(255, 255, 255, 0.7);
 	box-shadow: var(--shadow);
 }
+.announcement.pinned {
+	order: -1;
+}
+.announcement footer {
+	display: grid;
+	grid-auto-flow: row;
+	align-items: center;
+	grid-gap: 0.5em;
+	font-size: 0.8em;
+	width: 100%;
+}
+.announcement .pinned-label {
+	color: rgba(0, 0, 0, 0.5);
+	font-size: 0.8em;
+	float: right;
+	text-transform: uppercase;
+	letter-spacing: 0.05em;
+}
+.announcement:not(.pinned) .pinned-label {
+	font-size: 0;
+}
 .announcement date {
 	color: rgba(0, 0, 0, 0.7);
-	font-size: 0.8em;
 }
 @media (min-width: 571px) {
-	.announcement date {
-		text-align: right;
+	.announcement footer {
+		grid-auto-flow: column;
+		justify-content: space-between;
+		align-items: baseline;
 	}
 }
 
