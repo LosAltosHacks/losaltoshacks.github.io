@@ -32,10 +32,10 @@ function update(){
 	if($countdown){
 		const {days, hours, minutes, seconds} = moment.duration(eventStart.diff(moment()))._data
 		$countdown.textContent = [
-			days && `${days} days ·`,
-			`${hours} hours ·`,
-			`${minutes} minutes ·`,
-			`${seconds} seconds`
+			days && `${days} day${days === 1 ? '' : 's'} ·`,
+			`${hours} hour${hours === 1 ? '' : 's'} ·`,
+			`${minutes} minute${minutes === 1 ? '' : 's'} ·`,
+			`${seconds} second${seconds === 1 ? '' : 's'}`
 		].filter(_ => _).join(' ')
 	}
 }
